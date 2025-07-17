@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8.5-GTNH",
+  "package": "invalid.myask.undertow.mixins",
+  "refmap": "mixins.undertow.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": ["MixinEntityLivingBase_DepthStrider", "MixinWorld_DepthstriderAntiCurrent", "MixinEntityHorse_DepthStrider_ArmorGetter",
+    "MixinItemStack_curseBreaking",
+    "MixinEntityWaterMob_Impaling",
+    "MixinEntityLivingBase_swim",
+    "MixinEntityLivingBase_Poses", "MixinEntityPlayer_Crawl", "MixinEntityPlayerSP_Poses",
+    "MixinMovementInputFromOptions_poses", "MixinEntityClientPlayerMP_manualcrawl_swim",
+    "MixinRenderPlayer_flagHandRender", "MixinEntityRenderer_poseCamera", "MixinRenderPlayer_poseEquipment",
+    "MixinRenderManager_boundingBoxDisplayFixForPoses", "MixinModelBiped_NewPoses",
+    "MixinRenderItemFrame_newMaps",
+    "MixinContainerRepair_anvilZeroLevelRecipes", "MixinAnvilOutputSlot",
+    "MixinMapGenStructure_canGenAtAccessor", "MixinMinecraft_getTimer",
+    "ChestGenHooksGetter"
+  ],
+  "//" : "MixinContainerRepair_anvilZeroLevelRecipes$MixinAnvilOutputSlot",
+  "client": [],
+  "server": []
+}

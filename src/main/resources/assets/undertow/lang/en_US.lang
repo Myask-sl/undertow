@@ -1,0 +1,198 @@
+potion.conduit_power=Conduit Power
+potion.dolphins_grace=Dolphin's Grace
+
+potion.conduit_power.postfix=Potion of Conduit Power
+potion.dolphins_grace.postfix=Potion of Dolphin's Grace
+
+item.trident.name=Trident
+item.nautilus.name=Nautilus Shell
+item.seaheart.name=Heart of the Sea
+
+item.shield.name=Shield
+
+item.dumb_map.name=Empty Nonlocator Map
+item.dumb_filled_map.name=Nonlocator Map
+item.tooltip.map.blind=Will not show players or framed maps.
+
+item.explorer_map.name=Explorer Map
+item.explorer_map.buried_treasure.name=Treasure Map
+item.explorer_map.templeDesert.name=Desert Pyramid Explorer Map
+item.explorer_map.templeJungle.name=Jungle Temple Explorer Map
+item.explorer_map.witchHutSwamp.name=Witch Hut Explorer Map
+item.explorer_map.monument.name=Ocean Explorer Map
+item.explorer_map.mansion.name=Woodland Explorer Map
+
+item.null.name=§CSomeone forgot to §4§nname§C this Item!§r
+
+entity.drowned.name=Drowned
+
+enchantment.curse.durability=§CCurse of Breaking§r
+enchantment.curse.damage.all=§CCurse of Weakness§r
+enchantment.curse.damage.aquatic=§CCurse of Fishboon§r
+enchantment.curse.damage.arthropods=§CCurse of Bugsboon§r
+enchantment.curse.damage.undead=§CCurse of Undeadsboon§r
+
+enchantment.curse.damage.invalid=§CCurse of Array Over§krun§r
+enchantment.damage.invalid=§CArray Over§kruns§r§cbane§r
+
+enchantment.damage.aquatic=Impaling
+
+enchantment.cleaving=Cleaving
+
+enchantment.depth_strider=Depth Strider
+enchantment.magma_strider=Magma Strider
+
+enchantment.trident.aquafly=Riptide
+enchantment.trident.lanyard=Loyalty
+enchantment.zeustarget=Channeling
+
+commands.locate.usage=/locate (Structure) (radius in chunks, default 100) (in generated chunks, default true) (in ungenerated chunks, default true).\n Aliases: /loc, /locs, /locate structure. /locate biome (arguments) will invoke /locatebiome. 
+commands.locatebiome.usage=/locatebiome (Biome name or ID#) (radius in chunks, default 100) (in generated chunks, default true) (in ungenerated chunks, default true).\n Alias: /locb, /locate biome.
+commands.givemapto.usage=/givemapto (structure) -gives map pointing to desired structure
+
+commands.locatebiome.notfound=Biome %s not found within specified search radius %d chunks under specified exploredness.
+commands.locatebiome.found=Biome %s found at [%d, %d].
+
+commands.locatestructure.notfound=Structure %s not found within specified search radius %d chunks under specified exploredness.
+commands.locatestructure.found=Structure %s found at [%d, %d].
+
+commands.err.args.none=This command needs arguments!
+commands.err.args.surfeit=This command doesn't take that many arguments!
+commands.err.biome.invalid=Invalid biome specified. Use tab-complete.
+commands.err.structure.invalid=Invalid structure specified. Use tab-complete.
+commands.err.excludedmiddle=Nowhere is neither explored nor unexplored, allow at least one.
+
+config.commands.locate.permissionlevel=Permission level for /locate (0-4. 2 vanilla. 5 prevents any use)
+config.commands.locatebiome.permissionlevel=Permission level for /locatebiome (0-4. 2 vanilla. 5 prevents any use)
+config.commands.givemapto.permissionlevel=Permission level for /givemapto (0-4. nonvanilla. 5 prevents any use)
+
+config.commands.locate.radius.default=Default chunk radius for /locate
+config.commands.locatebiome.radius.default=Default chunk radius for /locatebiome
+
+config.enable.enchant.curse.breaking=Enable Curse of Breaking (nonvanilla)
+config.enable.enchant.depth.strider=Enable Depth Strider (vanilla)
+config.enable.enchant.magma.strider=Enable Magma Strider (nonvanilla)
+config.enable.enchant.swift.swim=Enable Swift Swim (nonvanilla)
+config.enable.enchant.curses.damage=Enable Curses of Weakness (nonvanilla)
+config.enable.enchant.trident=Enable vanilla trident enchants: Impaling, Channeling, Loyalty, Riptide
+config.enable.enchant.undertow=Enable Undertow enchant (for tridents: nonvanilla)
+config.enable.enchant.cleaving=Enable Cleaving enchant on axes (from Combat Tests)
+
+config.id.enchantment.curse.breaking=Enchant ID: §CCurse of Breaking§r
+config.id.enchantment.curse.damage.all=Enchant ID: §CCurse of Weakness§r
+config.id.enchantment.curse.damage.undead=Enchant ID: §CCurse of Undeadboon§r
+config.id.enchantment.curse.damage.arthropods=Enchant ID: §CCurse of Bugsboon§r
+config.id.enchantment.curse.damage.aquatic=Enchant ID: §CCurse of Fishboon§r
+
+config.id.enchant.depth.strider=Enchant ID: Depth Strider
+config.id.enchant.magma.strider=Enchant ID: Magma Strider
+config.id.enchant.swift.swim=Enchant ID for Swiftswim
+
+config.id.enchantment.damage.aquatic=Enchant ID: Impaling
+config.id.enchantment.zeustarget=Enchant ID: Channeling
+config.id.enchantment.trident.lanyard=Enchant ID: Loyalty
+config.id.enchantment.trident.aquafly=Enchant ID: Riptide
+config.id.enchant.undertow=Enchant ID: Undertow
+config.id.enchant.cleaving=Enchant ID: Cleaving
+
+config.enchant.zeustarget.appliesto.tridents=Tridents enchantable: Channeling (vanilla)
+config.enchant.zeustarget.appliesto.swords=Swords enchantable: Channeling (nonvanilla)
+config.enchant.zeustarget.needed.weather.minimum=Channeling weather minimum: 0 anytime, 1 rain, 2 (=vanilla) thunderstorm
+config.enchant.zeustarget.needed.weather.maximum=Channeling weather maximum: 0 anytime, 1 rain, 2 (=vanilla) thunderstorm
+config.enchant.zeustarget.needed.weather.scaled=Higher levels of channeling exist and allow lower weather requirements (overrides min/max. Nonvanilla)
+config.enchant.zeustarget.needed.skyvis=Channeling hit must see sky to strike (vanilla)
+config.enchant.zeustarget.needed.skypath=Channeling hit requires clear column to sky (vanilla)
+config.enchant.zeustarget.permit.melee=Channeling hit in mêlée will call lightning bolt. Dangerous! (nonvanilla)
+config.enchant.zeustarget.owner.safe=Called lightning won't [directly] hurt owner (nonvanilla)
+config.enchant.zeustarget.permit.allblocks=Called lightning triggered on all blocks, not just lightning rods (nonvanilla)
+config.enchant.zeustarget.channeling.aggro=Called lightning aggros damaged on caller (nonvanilla)
+
+config.enchant.depthstrider.horses=Let horses benefit from Depth/Magma Strider, as in vanilla 1.14-1.20.4
+config.enchant.depthstrider.nonboots=Let non-boots Depth/Magma Strider work, as in vanilla < 1.21. Does not enable applying.
+
+config.enchant.swiftswim.horses=Let horses benefit from swiftswim
+config.enchant.swiftswim.nonpants=Let non-pants Swiftswim apply. Does not enable so-enchanting.
+
+config.enchant.lanyard.novoid=Loyalty triggers on void-out, returning item (like Bedrock)
+
+config.kind.bane.aquatic=number for impalekind
+
+impaling.mechanics=How to Impale
+config.impale.by.creaturetype=Impale by creature type (like Java)
+config.impale.in.rain=Impale in rain (like Bedrock)
+config.impale.in.water=Impale underwater (like Bedrock)
+config.impale.drowned=Impale Drowned, in particular (nonvanilla)
+config.impale.stack.triggers=Add Impaling damage multiple times if qualifying (nonvanilla)
+
+config.riptide.impulse.instant=Riptide instant thrust rather than extended (vanilla)
+config.riptide.impulse.ymult=Riptide Y multiplier (0.39 ~ vanilla)
+config.riptide.super.enable=Riptide gets fourth level that always works (nonvanilla)
+
+config.drowned.throw.riptide.tridents=Drowned throw Riptide tridents, unlike player (vanilla)
+config.drowned.fly.riptide.tridents=Drowned fly Riptide tridents (when not thrown, nonvanilla)
+config.drowned.activate.channeling.tridents=Drowned-thrown Channeling tridents can make lightning bolts (1.21.2+)
+config.drowned.throw.away.tridents=Drowned lose thrown tridents like players (nonvanilla)
+
+config.drowned.equipment.odds.bedrock=Drowned get equipped when converted and have more tridents/shells, fewer fishing rods (Bedrock)
+
+config.trident.allow.multihits=Thrown trident will hit again after impacting something (Bedrock)
+config.trident.destroys.chorusflower=Thrown trident destroys chorus flower (as usual)
+config.trident.destroys.stala.ites=Thrown trident destroys stala??ites (as usual)
+config.trident.creative.no.mining=Trident leftclick can't break blocks in creative, just like sword (as usual)
+config.trident.dispenser.throws=Dispenser throws tridents (like in Combat Tests)
+
+config.shield.pitch.matters=Shield pitch matters for block angle calc (nonvanilla)
+config.shield.knockback=Make shield knock back melee attackers (like in Bedrock or pre-1.14 bugging it out)
+
+config.map.mark.free=Let right-click map on air to mark POI (limit 1 per map, nonvanilla)
+config.map.mark.mansion=Let right-click map on woodland mansion to mark it on map (nonvanilla)
+config.map.mark.monument=Let right-click map on ocean monument/Guardian to mark monument on map (nonvanilla)
+config.map.mark.treasure=Let right-click map on buried treasure to mark it on map (nonvanilla)
+config.map.mark.banner=Let right-click map on banner to mark it on map (vanilla in Java)
+
+config.map.explorer.radius=How many chunks away to search for explorer map targets
+config.map.explorer.zoom=What zoom explorer maps are (0-4, vanilla 2)
+config.map.explorer.unfoundonly=Do explorer maps always return a never-found structure (vanilla false)?
+
+config.poses.crawl.enable=Let player crawl
+config.poses.crawl.manual=Let player manually engage crawl by doubletap sneak (nonvanilla)
+config.poses.crawl.autostand=Crawling player autostands when able (as vanilla)
+config.poses.crawl.manual.window=Manual crawl double-tap window in ticks (20/s) default 7 (nonvanilla. -1 disables doubletap-sneak crawl)
+config.poses.crawl.keybind.enable=Manual crawl (if enabled) has direct keybind (nonvanilla)
+config.poses.crawl.keybind.toggle=Manual crawl keybind, if enabled, is toggle rather than hold (neither vanilla)
+config.poses.crawl.deyaw=Prevent strafe/retreat from turning body during crawl.
+config.poses.crawl.enable.mobs=Let biped mobs crawl (nonvanilla, experimental)
+config.poses.sneak.height=Sneaking player's height: 1.8 unchanged, 1.65 (Bedrock -20.x experiments)/(Java 1.9-1.13), 1.5 (modern)
+config.poses.sneak.height.ratio.mobs=Biped sneak height (nonvanilla, 1.0 disables, 0.9 like 1.9-1.13 player, 0.83 like modern player)
+
+config.poses.swim.enable=Enable swimming (first in vanilla, 1.13+)
+config.poses.swim.silly=Vertical angle swimming accelerates rather than constant speed (nonvanilla)
+config.poses.swim.friction.multiplier=Swim friction multiplier (0.5-1 ideally, 0.75ish?)
+config.poses.swim.y.multiplier=Swim y-velocity multiplier (1 is silly-high. 0.25 seems accurate)
+config.poses.swimtide.ydrop.disable=If true, only crawl will immediately lower hitbox
+
+config.enable.blocks.conduit=Enable conduits
+
+config.enable.items.shield=Enable shields (Java Edition 1.9+)
+
+config.enable.blocks.maptable=Enable Cartography Table (Village&Pillage+)
+config.enable.craft.tablemaps=Enable making maps on Cartography Table (Bedrock)
+config.enable.craft.anvilmaps=Enable map recipes on anvil (Bedrock)
+config.enable.items.dumbmaps=Enable no-compass maps that don't show players (Bedrock)
+config.enable.map.marking=Enable manually marking maps (nonvanilla)
+
+config.anvil.maps.levelcost=Map anvil recipe cost. 0 (Bedrock default) has a mixin
+config.anvil.bugfix.leftstacks=Return stack of N-1 from left anvil input if it wasn't single (bugfix)
+config.anvil.zerocost_recipes=Allow taking result on anvil if no level cost for anything (? probably cheaty and breaks things)
+
+config.worldgen.treasure.fine_x=X position in chunk of buried treasure (defaults to 9 for Java. 8 is Bedrock)
+config.worldgen.treasure.depth_y=Max (Y) depth from surface at coordinate treasure gets buried
+config.worldgen.treasure.fine_z=Z position in chunk of buried treasure (defaults to 9 for Java. 8 is Bedrock)
+config.worldgen.treasure.chance.denominator=Denominator for buried treasure chance
+config.worldgen.treasure.chance.numerator=Numerator for buried treasure chance
+config.worldgen.treasure.enable=Generate buried treasure by default in overworld (dimension 0)? (vanilla true)
+
+key.crawl=Crawl
+
+death.attack.trident=%1$s was speared by %2$s
+death.attack.trident.item=%1$s was speared by %2$s using %3$s

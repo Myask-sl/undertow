@@ -1,0 +1,20 @@
+{
+  "shield.block": {
+    "category": "neutral",
+    "sounds": [
+      "item/shield.block"
+    ]
+  },
+  "trident.hit": {
+    "category": "neutral",
+    "sounds": [
+      "item/trident.hit"
+    ]
+  },
+  "trident.riptide": {
+    "category": "neutral",
+    "sounds": [
+      "item/trident.riptide"
+    ]
+  }
+}
