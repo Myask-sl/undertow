@@ -24,17 +24,10 @@ public class UndertowEnchantments {
 
     public static Enchantment CLEAVING;
 
-    public static void init(){
+    public static void init() {
         if (Config.enable_curse_breaking)
             CURSE_BREAKING = new EnchantmentCurseBreaking(
                 Config.enchant_curse_breaking_id, 1);
-
-        if (Config.enable_depth_strider)
-            DEPTH_STRIDER = new EnchantmentDepthStrider(Config.enchant_depthstrider_id, 2, EnumEnchantmentType.armor_feet, false);
-        if (Config.enable_magma_strider)
-            MAGMA_STRIDER = new EnchantmentDepthStrider(Config.enchant_magmastrider_id, 1, EnumEnchantmentType.armor_feet, true);
-        if (Config.enable_swift_swim)
-            SWIFT_SWIM = new EnchantmentSwiftSwim(Config.enchant_swiftswim_id, 1, EnumEnchantmentType.armor_legs);
 
         if (Config.enable_curses_damage) {
             CURSE_WEAKNESS = new EnchantmentCurseWeakness(Config.enchant_curse_weakness_id, 1, 0);
@@ -44,15 +37,22 @@ public class UndertowEnchantments {
                 CURSE_UNIMPALE = new EnchantmentCurseWeakness(Config.enchant_curse_unimpale_id, 1, Config.bane_kind_aquatic);
         }
 
+        if (Config.enable_depth_strider)
+            DEPTH_STRIDER = new EnchantmentDepthStrider(Config.enchant_depthstrider_id, 2, EnumEnchantmentType.armor_feet, false);
+        if (Config.enable_magma_strider)
+            MAGMA_STRIDER = new EnchantmentDepthStrider(Config.enchant_magmastrider_id, 1, EnumEnchantmentType.armor_feet, true);
+        if (Config.enable_swift_swim)
+            SWIFT_SWIM = new EnchantmentSwiftSwim(Config.enchant_swiftswim_id, 1, EnumEnchantmentType.armor_legs);
+
         if (Config.enable_enchants_trident) {
             CHANNELING = new EnchantmentChanneling(Config.enchant_channeling_id, 1); // by Zeus!
             IMPALING = new EnchantmentExtendedDamage(Config.enchant_impaling_id, 2, Config.bane_kind_aquatic);
             LOYALTY = new EnchantmentLoyalty(Config.enchant_loyalty_id, 5);
             RIPTIDE = new EnchantmentRiptide(Config.enchant_riptide_id, 2);
         }
-        if (Config.enable_undertow_trident) {
+        if (Config.enable_undertow_trident)
             UNDERTOW = new EnchantmentUndertow(Config.enchant_undertow_id, 2, EnumEnchantmentType.weapon);
-        }
+
         if (Config.enable_cleaving_axe) {
             CLEAVING = new EnchantmentCleaving(Config.enchant_cleaving_id, 2);
         }
