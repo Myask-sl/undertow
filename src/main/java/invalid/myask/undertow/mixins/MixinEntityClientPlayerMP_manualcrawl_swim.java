@@ -58,7 +58,7 @@ public class MixinEntityClientPlayerMP_manualcrawl_swim extends EntityPlayerSP {
                 ((IUndertowPosableEntity) this).undertow$setCrawling(undertow$manuallyCrawled);
             undertow$lastManuallyCrawled = undertow$manuallyCrawled;
         }
-        if (Config.enable_swim) {
+        if (Config.enable_swim) { //TODO: investigate swimstate stuttering??
             ((IUndertowPosableEntity) this).undertow$setSwimming(isSprinting() && isInsideOfMaterial(Material.water));
         }
     }
