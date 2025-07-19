@@ -37,16 +37,20 @@ public class EnchantmentSwiftSwim extends Enchantment {
     }
 
     public static int getSwiftSwimLevel (EntityLivingBase elb, boolean forLava) {
-        ItemStack swimEquipment = elb.getEquipmentInSlot(1);
-        int id = forLava ? -1 : Config.enchant_swiftswim_id;
-        if (Config.swiftswim_horses && elb instanceof EntityHorse horse && horse.func_110241_cb() > 0) swimEquipment = ((IDLC) horse).getArmor();
-        int swimLevel = EnchantmentHelper.getEnchantmentLevel(id, swimEquipment);
+        int swimLevel = 0;
+        if (Config.enable_swift_swim) {
+            ItemStack swimEquipment = elb.getEquipmentInSlot(1);
+            int id = forLava ? -1 : Config.enchant_swiftswim_id;
+            if (Config.swiftswim_horses && elb instanceof EntityHorse horse && horse.func_110241_cb() > 0)
+                swimEquipment = ((IDLC) horse).getArmor();
+            swimLevel = EnchantmentHelper.getEnchantmentLevel(id, swimEquipment);
 
-        if (Config.swiftswim_nonpants) {
-            int otherLevel;
-            for (int i = 2; i < 5; i++) {
-                otherLevel = EnchantmentHelper.getEnchantmentLevel(id, elb.getEquipmentInSlot(i));
-                if (otherLevel > swimLevel) swimLevel = otherLevel;
+            if (Config.swiftswim_nonpants) {
+                int otherLevel;
+                for (int i = 2; i < 5; i++) {
+                    otherLevel = EnchantmentHelper.getEnchantmentLevel(id, elb.getEquipmentInSlot(i));
+                    if (otherLevel > swimLevel) swimLevel = otherLevel;
+                }
             }
         }
         return swimLevel;

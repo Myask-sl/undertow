@@ -2,7 +2,6 @@ package invalid.myask.undertow.mixins;
 
 import invalid.myask.undertow.Config;
 import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.enchantments.EnchantmentSwiftSwim;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MathHelper;
@@ -27,7 +26,6 @@ public abstract class MixinEntityLivingBase_swim extends Entity {
             target = "Lnet/minecraft/entity/EntityLivingBase;moveFlying(FFF)V"), index = 1)
     private float undertow$pitchSwimForward(float originalForward) { //TODO: global swim enable?
         if (!((IUndertowPosableEntity) this).undertow$isSwimming()) return originalForward;
-        float swim_multiplier = EnchantmentSwiftSwim.getSwiftSwimMultiplier((EntityLivingBase) (Entity) this, false);
         this.motionY = (Config.silly_swim ? this.motionY : 0)
             + originalForward * MathHelper.sin(-this.rotationPitch * (float)Math.PI / 180.0F)
             * Config.swim_y_multiplier;

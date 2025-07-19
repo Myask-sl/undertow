@@ -6,6 +6,7 @@
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
   "mixins": ["MixinEntityLivingBase_DepthStrider", "MixinWorld_DepthstriderAntiCurrent", "MixinEntityHorse_DepthStrider_ArmorGetter",
+    "MixinEntityLivingBase_swiftSwim",
     "MixinItemStack_curseBreaking",
     "MixinEntityWaterMob_Impaling",
     "MixinEntityLivingBase_swim",
