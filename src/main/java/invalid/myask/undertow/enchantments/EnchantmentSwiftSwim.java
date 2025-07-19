@@ -1,8 +1,5 @@
 package invalid.myask.undertow.enchantments;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.ducks.IDLC;
-import invalid.myask.undertow.mixins.MixinEntityLivingBase_swim;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnumEnchantmentType;
@@ -10,10 +7,14 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.item.ItemStack;
 
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.ducks.IDLC;
+
 public class EnchantmentSwiftSwim extends Enchantment {
     static float swift_multiplier = 0.05F;
     public EnchantmentSwiftSwim(int id, int weight, EnumEnchantmentType type) {
         super(id, weight, type);
+        setName("swift_swim");
     }
 
     @Override

@@ -9,7 +9,7 @@ import net.minecraft.block.material.Material;
 public class UndertowBlocks {
     public static final Block CARTOGRAPHY_TABLE = new BlockCartographyTable(Material.wood).setBlockName("cartography_table").setBlockTextureName("maptable");
     public static final Block CONDUIT = new BlockConduit();
-    public static void registerBlocks() {
+    public static void register() {
         GameRegistry.registerBlock(CARTOGRAPHY_TABLE, "cartography_table");
     }
 }

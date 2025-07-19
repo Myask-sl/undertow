@@ -8,7 +8,6 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-import invalid.myask.undertow.Tags;
 import invalid.myask.undertow.command.CommandGiveMapTo;
 import invalid.myask.undertow.command.CommandLocate;
 import invalid.myask.undertow.command.CommandLocateBiome;
@@ -30,6 +29,7 @@ public class CommonProxy {
 
         // Undertow.LOG.info(Config.greeting);
         Undertow.LOG.info("I am " + Undertow.MODNAME + " at version " + Tags.VERSION);
+        UndertowBlocks.register();
         UndertowItems.register();
         UndertowEntities.register();
         UndertowStructures.register();
