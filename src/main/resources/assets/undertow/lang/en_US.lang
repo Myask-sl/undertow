@@ -47,6 +47,8 @@ enchantment.trident.aquafly=Riptide
 enchantment.trident.lanyard=Loyalty
 enchantment.zeustarget=Channeling
 
+enchantment.null=§CForgotten-name Enchantment§r
+
 commands.locate.usage=/locate (Structure) (radius in chunks, default 100) (in generated chunks, default true) (in ungenerated chunks, default true).\n Aliases: /loc, /locs, /locate structure. /locate biome (arguments) will invoke /locatebiome. 
 commands.locatebiome.usage=/locatebiome (Biome name or ID#) (radius in chunks, default 100) (in generated chunks, default true) (in ungenerated chunks, default true).\n Alias: /locb, /locate biome.
 commands.givemapto.usage=/givemapto (structure) -gives map pointing to desired structure
