@@ -19,7 +19,7 @@
     "MixinMapGenStructure_canGenAtAccessor", "MixinMinecraft_getTimer",
     "ChestGenHooksGetter"
   ],
-  "//" : ["MixinContainerRepair_anvilZeroLevelRecipes$MixinAnvilOutputSlot", "MixinChestGenHooks"]
+  "//" : ["MixinContainerRepair_anvilZeroLevelRecipes$MixinAnvilOutputSlot", "MixinChestGenHooks"],
   "client": [],
   "server": []
 }

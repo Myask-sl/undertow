@@ -12,6 +12,7 @@ public class BlockCartographyTable extends BlockContainer {
     private IIcon sideIcon;
     public BlockCartographyTable(Material mat) {
         super(mat);
+        setHardness(2.5F);
     }
 
     @Override
