@@ -1,12 +1,13 @@
 package invalid.myask.undertow.client;
 
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.entities.ProjectileRiptide;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.entities.ProjectileRiptide;
 
 public class RenderRiptide extends Render {
     public static final RenderRiptide instance = new RenderRiptide();

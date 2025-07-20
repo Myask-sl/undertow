@@ -1,8 +1,7 @@
 package invalid.myask.undertow.client;
 
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.UndertowItems;
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -14,7 +13,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
+
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.UndertowItems;
 
 public class RenderDrowned extends RenderBiped {
     //Does not extend RenderZombie because it does nothing except switch in ZombieVillager, using a private function.

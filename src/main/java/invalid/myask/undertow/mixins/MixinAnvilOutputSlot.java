@@ -2,15 +2,17 @@ package invalid.myask.undertow.mixins;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.recipes.CartographyRegistry;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ContainerRepair;
-import net.minecraft.inventory.IInventory;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ContainerRepair;
+import net.minecraft.inventory.IInventory;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.recipes.CartographyRegistry;
 
 @Mixin(targets = {"net.minecraft.inventory.ContainerRepair$2"})
 public abstract class MixinAnvilOutputSlot extends net.minecraft.inventory.Slot {

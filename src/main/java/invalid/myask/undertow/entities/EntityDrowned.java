@@ -1,11 +1,7 @@
 package invalid.myask.undertow.entities;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.enchantments.EnchantmentRiptide;
-import invalid.myask.undertow.UndertowEnchantments;
-import invalid.myask.undertow.item.ItemTrident;
-import invalid.myask.undertow.UndertowItems;
+import java.util.ArrayList;
+
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
@@ -21,7 +17,12 @@ import net.minecraft.pathfinding.PathNavigate;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 
-import java.util.ArrayList;
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.enchantments.EnchantmentRiptide;
+import invalid.myask.undertow.UndertowEnchantments;
+import invalid.myask.undertow.item.ItemTrident;
+import invalid.myask.undertow.UndertowItems;
 
 import static invalid.myask.undertow.util.UndertowUtils.rainCheck;
 

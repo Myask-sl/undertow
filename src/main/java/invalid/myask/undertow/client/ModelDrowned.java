@@ -1,11 +1,12 @@
 package invalid.myask.undertow.client;
 
-import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.item.ItemTrident;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.model.ModelZombie;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
+
+import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.item.ItemTrident;
 
 public class ModelDrowned extends ModelZombie {
     public ModelDrowned(float inflate, boolean half64tex) {

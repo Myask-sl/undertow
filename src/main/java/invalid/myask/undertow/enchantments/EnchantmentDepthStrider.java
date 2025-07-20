@@ -10,6 +10,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.ducks.IDLC;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 
 public class EnchantmentDepthStrider extends Enchantment {
     public final boolean forLava;

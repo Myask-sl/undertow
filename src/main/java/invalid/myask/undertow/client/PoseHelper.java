@@ -1,10 +1,12 @@
 package invalid.myask.undertow.client;
 
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.mixins.MixinMinecraft_getTimer;
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
-import org.lwjgl.opengl.GL11;
+
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.mixins.MixinMinecraft_getTimer;
 
 import static invalid.myask.undertow.ducks.IUndertowPosableEntity.FULL_TILT;
 

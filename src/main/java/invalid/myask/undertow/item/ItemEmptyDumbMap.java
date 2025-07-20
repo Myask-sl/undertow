@@ -1,12 +1,13 @@
 package invalid.myask.undertow.item;
 
-import invalid.myask.undertow.UndertowItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemMapBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.MapData;
+
+import invalid.myask.undertow.UndertowItems;
 
 public class ItemEmptyDumbMap extends ItemMapBase implements IBackportedMap {
 

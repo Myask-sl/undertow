@@ -1,6 +1,5 @@
 package invalid.myask.undertow.entities;
 
-
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.world.World;

@@ -1,7 +1,5 @@
 package invalid.myask.undertow.item;
 
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.client.IItemEntityRendered;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
@@ -10,6 +8,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.client.IItemEntityRendered;
 
 public class ItemShield extends Item implements IItemEntityRendered {
     public static final int VANILLA_SHIELD_DURABILITY = 336;

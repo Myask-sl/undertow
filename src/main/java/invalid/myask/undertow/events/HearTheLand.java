@@ -2,11 +2,12 @@ package invalid.myask.undertow.events;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import invalid.myask.undertow.util.UndertowUtils;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.InitMapGenEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+
+import invalid.myask.undertow.util.UndertowUtils;
 
 public class HearTheLand {
     public static final HearTheLand instance = new HearTheLand();

@@ -1,9 +1,7 @@
 package invalid.myask.undertow.item;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.UndertowItems;
-import invalid.myask.undertow.ducks.IMapGenStructure_Accessor;
-import invalid.myask.undertow.util.UndertowUtils;
+import java.util.List;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -14,7 +12,10 @@ import net.minecraft.world.gen.structure.MapGenScatteredFeature;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.storage.MapData;
 
-import java.util.List;
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.UndertowItems;
+import invalid.myask.undertow.ducks.IMapGenStructure_Accessor;
+import invalid.myask.undertow.util.UndertowUtils;
 
 public class ItemExplorerMap extends ItemDecoMap {
     public ItemExplorerMap() {

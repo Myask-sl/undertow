@@ -1,9 +1,7 @@
 package invalid.myask.undertow.entities;
 
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.item.ItemTrident;
-import invalid.myask.undertow.network.RiptideHitMessage;
+import java.util.UUID;
+
 import net.minecraft.command.IEntitySelector;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -16,7 +14,10 @@ import net.minecraft.network.play.server.S2BPacketChangeGameState;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-import java.util.UUID;
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.item.ItemTrident;
+import invalid.myask.undertow.network.RiptideHitMessage;
 
 public class ProjectileRiptide extends Entity {
     protected EntityLivingBase followed;

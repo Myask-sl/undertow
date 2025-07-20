@@ -1,9 +1,7 @@
 package invalid.myask.undertow.entities;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.enchantments.EnchantmentChanneling;
-import invalid.myask.undertow.UndertowEnchantments;
-import invalid.myask.undertow.item.ItemTrident;
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.Enchantment;
@@ -20,7 +18,10 @@ import net.minecraft.network.play.server.S2BPacketChangeGameState;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 
-import java.util.List;
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.enchantments.EnchantmentChanneling;
+import invalid.myask.undertow.UndertowEnchantments;
+import invalid.myask.undertow.item.ItemTrident;
 
 public class ProjectileTrident extends EntityArrow {
     private static final int DESPAWN_MINUTES = 5;

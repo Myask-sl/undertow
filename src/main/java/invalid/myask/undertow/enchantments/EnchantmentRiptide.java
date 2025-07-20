@@ -1,14 +1,15 @@
 package invalid.myask.undertow.enchantments;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.UndertowEnchantments;
-import invalid.myask.undertow.util.UndertowUtils;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.UndertowEnchantments;
+import invalid.myask.undertow.util.UndertowUtils;
 
 public class EnchantmentRiptide extends EnchantmentTrident {
     private static int ONE_BLOCK_FLIGHT = 1;

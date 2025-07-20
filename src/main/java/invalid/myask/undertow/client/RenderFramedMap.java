@@ -1,5 +1,7 @@
 package invalid.myask.undertow.client;
 
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
@@ -10,7 +12,6 @@ import net.minecraft.entity.item.EntityItemFrame;
 import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.MapData;
-import org.lwjgl.opengl.GL11;
 
 public class RenderFramedMap extends Render {
     public static final RenderFramedMap instance = new RenderFramedMap();

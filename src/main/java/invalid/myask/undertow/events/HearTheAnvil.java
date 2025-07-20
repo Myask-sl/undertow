@@ -1,11 +1,9 @@
 package invalid.myask.undertow.events;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.inventory.AnvilContents;
-import invalid.myask.undertow.recipes.CartographyRegistry;
-import invalid.myask.undertow.recipes.anvil.IAnvilCosts;
-import invalid.myask.undertow.recipes.anvil.SimpleAnvilRecipe;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
@@ -15,8 +13,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.event.entity.player.AnvilRepairEvent;
 
-import java.util.HashMap;
-import java.util.Map;
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.inventory.AnvilContents;
+import invalid.myask.undertow.recipes.CartographyRegistry;
+import invalid.myask.undertow.recipes.anvil.IAnvilCosts;
+import invalid.myask.undertow.recipes.anvil.SimpleAnvilRecipe;
 
 public class HearTheAnvil {
     public static final HearTheAnvil instance = new HearTheAnvil();

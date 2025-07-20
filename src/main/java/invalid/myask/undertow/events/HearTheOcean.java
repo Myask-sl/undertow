@@ -1,9 +1,10 @@
 package invalid.myask.undertow.events;
 
+import java.lang.reflect.InvocationTargetException;
+import org.lwjgl.opengl.GL11;
+
 import cpw.mods.fml.common.eventhandler.Event;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-
-import invalid.myask.undertow.client.PoseHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -29,10 +30,9 @@ import net.minecraftforge.event.entity.living.ZombieEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
-import java.lang.reflect.InvocationTargetException;
-
 import invalid.myask.undertow.Config;
 import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.client.PoseHelper;
 import invalid.myask.undertow.client.RenderFramedMap;
 import invalid.myask.undertow.entities.EntityCalledLightning;
 import invalid.myask.undertow.entities.EntityDrowned;
@@ -41,7 +41,6 @@ import invalid.myask.undertow.item.IBackportedMap;
 import invalid.myask.undertow.item.ItemShield;
 import invalid.myask.undertow.item.ItemTrident;
 import invalid.myask.undertow.UndertowItems;
-import org.lwjgl.opengl.GL11;
 
 import static java.lang.Float.max;
 import static java.lang.Float.min;

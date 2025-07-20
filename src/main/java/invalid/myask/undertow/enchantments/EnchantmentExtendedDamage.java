@@ -1,8 +1,5 @@
 package invalid.myask.undertow.enchantments;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.item.ItemTrident;
 import net.minecraft.enchantment.EnchantmentDamage;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -10,6 +7,9 @@ import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.item.ItemTrident;
 import static invalid.myask.undertow.util.UndertowUtils.rainCheck;
 
 public class EnchantmentExtendedDamage extends EnchantmentDamage {
