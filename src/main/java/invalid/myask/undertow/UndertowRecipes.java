@@ -80,7 +80,7 @@ public class UndertowRecipes {
                 CartographyRegistry.registerAnvilRecipe(Items.filled_map, Items.map,
                     TableAnvilMapCloneRecipe.instance);
                 CartographyRegistry.registerAnvilRecipe(Items.filled_map, Items.paper,
-                    AnvilMapZoomRecipe.instance);
+                    AnvilMapZoomRecipe.instance); //TODO: bimap stack, player UUID. No, better: write zoom to tags.
                 if (Config.enable_deco_maps) {
                     CartographyRegistry.registerAnvilRecipe(UndertowItems.DECO_MAP, Items.map,
                         TableAnvilMapCloneRecipe.instance);
