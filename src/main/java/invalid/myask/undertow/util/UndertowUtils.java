@@ -23,7 +23,7 @@ public class UndertowUtils {
 
     private static Map<String, MapGenStructure> structureTypeMap = new HashMap<>();
     private static List<String> structureNameList = new ArrayList<>();
-    private static Map<String, BiomeGenBase> templeBiomeMap = new HashMap<>();
+    private static final Map<String, BiomeGenBase> templeBiomeMap = new HashMap<>();
 
     public static void noteStructGen(MapGenStructure mGS) {
         String s = mGS.func_143025_a();
@@ -137,7 +137,7 @@ public class UndertowUtils {
         if (!explored && !unexplored) return null; //Can't find anything outside the set of (p & !p)
         int chunX = inX >> 4, chunZ = inZ >> 4;
 
-//        struct.func_151539_a(inW.getChunkProvider(), inW, chunX, chunZ, null);
+//        struct.func_151539_a(inW.getChunkProvider(), inW, chunX, chunZ, null); //Something's desynched sometimes between this and gen. FIXME
 
         for (int sqRad = 0; sqRad <= radius; sqRad++) {
             boolean xEdge = false, zEdge = false;

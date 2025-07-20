@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.entity.RendererLivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(RenderPlayer.class)
-public abstract class MixinRenderPlayer_poseEquipment extends RendererLivingEntity {
+public abstract class MixinRenderPlayer_poseEquipment extends RendererLivingEntity {//TODO: delete
     public MixinRenderPlayer_poseEquipment(ModelBase mb, float f) {
         super(mb, f);
     }

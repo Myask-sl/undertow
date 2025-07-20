@@ -51,6 +51,7 @@ public class Config {
 
     public static boolean swiftswim_horses = true;
     public static boolean swiftswim_nonpants = true;
+    public static float swift_swim_multiplier = 0.1F;
 
     public static boolean loyal_cannot_void = false; //like Bedrock!
 
@@ -86,7 +87,7 @@ public class Config {
     public static boolean shield_knockback_enabled = true;
 
     public static boolean map_mark_free = true;
-    public static boolean map_mark_mansion = true;
+    public static boolean map_mark_mansion = true; //TODO: impl
     public static boolean map_mark_monument = true; //TODO: false all
     public static boolean map_mark_treasure = true;
     public static boolean map_mark_banner = true;
@@ -100,7 +101,7 @@ public class Config {
     public static boolean crawl_player_autostand = true;
     public static int crawl_player_manual_doublesneak_window = 7; //TODO: clientside //tick range for doublepress. 7 @ 20 t/s = .35s
     public static boolean enable_crawl_keybind = true; //TODO: nonvanilla false
-    public static boolean key_toggles_crawl = true; //TODO: clientside
+    public static boolean key_toggles_crawl = true; //TODO: clientside. Also, FIXME?
     public static boolean de_yaw_crawl_pose = true;
     public static boolean crawl_biped_mobs_enable = true; //TODO: false
     public static float sneak_player_height = 1.65F;
@@ -127,9 +128,9 @@ public class Config {
     public static boolean guard_anvil_left = true;
     public static boolean allow_free_anvil_recipes_general = false;
 
-    public static int locate_permission_level = 0; //TODO: all 2
-    public static int locatebiome_permission_level = 0;
-    public static int givemapto_permission_level = 0;
+    public static int locate_permission_level = 0; //TODO: 2
+    public static int locatebiome_permission_level = 0; //TODO: 2
+    public static int givemapto_permission_level = 0; //TODO: 2
 
     public static int locate_default_radius = 100;
     public static int locatebiome_default_radius = 200;
@@ -232,6 +233,9 @@ public class Config {
             swiftswim_horses, "Let horses benefit from swiftswim", "config.enchant.swiftswim.horses");
         swiftswim_nonpants = configuration.getBoolean("swiftswim_nonpants", "enchant.swiftswim",
             swiftswim_nonpants, "Let non-pants Swiftswim apply. Does not enable so-enchanting.", "config.enchant.swiftswim.nonpants");
+        swift_swim_multiplier = configuration.getFloat("swift_swim_multiplier", "enchant.swiftswim",
+            swift_swim_multiplier, 0, Float.MAX_VALUE, "Speed multiplier per swiftswim level (nonvanilla)",
+            "config.enchant.swiftswim.multiplier");
 
         loyal_cannot_void = configuration.getBoolean("loyal_cannot_void", "enchant.loyal", loyal_cannot_void,
             "Loyal-enchanted tridents will start returning rather than dying to the Void (Bedrock)", "config.enchant.lanyard.novoid");

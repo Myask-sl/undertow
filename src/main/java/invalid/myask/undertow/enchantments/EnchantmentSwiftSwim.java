@@ -11,7 +11,6 @@ import invalid.myask.undertow.Config;
 import invalid.myask.undertow.ducks.IDLC;
 
 public class EnchantmentSwiftSwim extends Enchantment {
-    static float swift_multiplier = 0.05F;
     public EnchantmentSwiftSwim(int id, int weight, EnumEnchantmentType type) {
         super(id, weight, type);
         setName("swift_swim");
@@ -58,6 +57,6 @@ public class EnchantmentSwiftSwim extends Enchantment {
     }
 
     public static float getSwiftSwimMultiplier(EntityLivingBase elb, boolean b) {
-        return 1 + swift_multiplier * getSwiftSwimLevel(elb, b);
+        return 1 + Config.swift_swim_multiplier * getSwiftSwimLevel(elb, b);
     }
 }

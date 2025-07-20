@@ -23,43 +23,43 @@ public class RenderTrident extends Render implements IItemRenderer {
     public static final RenderTrident instance = new RenderTrident();
     protected static final ResourceLocation TRITEX = new ResourceLocation(Undertow.MODID, "textures/entity/trident.png");
 
-    private static Vec3 EQUIP_FP_POS = Vec3.createVectorHelper(0.0, -.3 ,0.85);
-    private static float EQUIP_FP_YAW = 75;
-    private static float EQUIP_FP_PITCH = -5;
-    private static float EQUIP_FP_ROLL = -10;
+    private static final Vec3 EQUIP_FP_POS = Vec3.createVectorHelper(0.0, -.3 ,0.85);
+    private static final float EQUIP_FP_YAW = 75;
+    private static final float EQUIP_FP_PITCH = -5;
+    private static final float EQUIP_FP_ROLL = -10;
     private static final float EQUIP_FP_SCALE = 2;
 
-    private static Vec3 USING_FP_POS = Vec3.createVectorHelper(-0.8, 2.2, 1.0);
-    private static Vec3 USING_FP_TICK_POS_DELTA = Vec3.createVectorHelper(-0.07, 0, 0.015);
+    private static final Vec3 USING_FP_POS = Vec3.createVectorHelper(-0.8, 2.2, 1.0);
+    private static final Vec3 USING_FP_TICK_POS_DELTA = Vec3.createVectorHelper(-0.07, 0, 0.015);
 
-    private static float USING_FP_UNYAW = -60;
-    private static float USING_FP_YAW = 0;
-    private static float USING_FP_PITCH = -90;
-    private static float USING_FP_ROLL = -90;
+    private static final float USING_FP_UNYAW = -60;
+    private static final float USING_FP_YAW = 0;
+    private static final float USING_FP_PITCH = -90;
+    private static final float USING_FP_ROLL = -90;
 
-    private static Vec3 RIPTIDE_FP_POS = Vec3.createVectorHelper(-.8, 1.2, .9);
-    private static float RIPTIDE_FP_YAW = -60;
-    private static float RIPTIDE_FP_PITCH = -90;
-    private static float RIPTIDE_FP_ROLL = -90;
+    private static final Vec3 RIPTIDE_FP_POS = Vec3.createVectorHelper(-.8, 1.2, .9);
+    private static final float RIPTIDE_FP_YAW = -60;
+    private static final float RIPTIDE_FP_PITCH = -90;
+    private static final float RIPTIDE_FP_ROLL = -90;
 
-    private static Vec3 USING_3P_POS = Vec3.createVectorHelper(-0.2, 0.5, 0.9);
-    private static float USING_3P_YAW = 0;
-    private static float USING_3P_PITCH = 180;
-    private static float USING_3P_ROLL = 40;
+    private static final Vec3 USING_3P_POS = Vec3.createVectorHelper(-0.2, 0.5, 0.9);
+    private static final float USING_3P_YAW = 0;
+    private static final float USING_3P_PITCH = 180;
+    private static final float USING_3P_ROLL = 40;
 
-    private static Vec3 RIPTIDE_3P_POS = Vec3.createVectorHelper(0.5, 0.0, 1.5);
-    private static float RIPTIDE_3P_YAW = 15;
-    private static float RIPTIDE_3P_PITCH = 120;
-    private static float RIPTIDE_3P_ROLL = -30;
+    private static final Vec3 RIPTIDE_3P_POS = Vec3.createVectorHelper(0.5, 0.0, 1.5);
+    private static final float RIPTIDE_3P_YAW = 15;
+    private static final float RIPTIDE_3P_PITCH = 120;
+    private static final float RIPTIDE_3P_ROLL = -30;
 
-    private static Vec3 EQUIP_3P_POS = Vec3.createVectorHelper(-0.2, 1.0, 0.875);
-    private static float EQUIP_3P_YAW = 45;
-    private static float EQUIP_3P_PITCH = 18;
-    private static float EQUIP_3P_ROLL = -10;
-    private static float EQUIP_3P_SCALE = 2.5F; //1.25F; //TODO: *final*ize
+    private static final Vec3 EQUIP_3P_POS = Vec3.createVectorHelper(-0.2, 1.0, 0.875);
+    private static final float EQUIP_3P_YAW = 45;
+    private static final float EQUIP_3P_PITCH = 18;
+    private static final float EQUIP_3P_ROLL = -10;
+    private static final float EQUIP_3P_SCALE = 2.5F; //1.25F;
 
-    private static float ENTITY_SCALE = 0.8F;
-    private static double BACKUP_FACTOR = -0.75;
+    private static final float ENTITY_SCALE = 0.8F;
+    private static final double BACKUP_FACTOR = -0.75;
 
     public static TridentModel blat = new TridentModel();
     static float fracTick;
@@ -119,7 +119,7 @@ public class RenderTrident extends Render implements IItemRenderer {
 
     @SubscribeEvent
     public void grabRenderPartialTick(TickEvent.RenderTickEvent event) {
-        this.fracTick = event.renderTickTime;
+        fracTick = event.renderTickTime;
     }
 
     @Override

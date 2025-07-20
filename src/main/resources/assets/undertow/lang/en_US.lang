@@ -115,6 +115,7 @@ config.enchant.depthstrider.nonboots=Let non-boots Depth/Magma Strider work, as 
 
 config.enchant.swiftswim.horses=Let horses benefit from swiftswim
 config.enchant.swiftswim.nonpants=Let non-pants Swiftswim apply. Does not enable so-enchanting.
+config.enchant.swiftswim.multiplier=Speed multiplier per swiftswim level (nonvanilla)
 
 config.enchant.lanyard.novoid=Loyalty triggers on void-out, returning item (like Bedrock)
 
