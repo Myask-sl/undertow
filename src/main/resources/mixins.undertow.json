@@ -15,11 +15,11 @@
     "MixinRenderPlayer_flagHandRender", "MixinEntityRenderer_poseCamera", "MixinRenderPlayer_poseEquipment",
     "MixinRenderManager_boundingBoxDisplayFixForPoses", "MixinModelBiped_NewPoses",
     "MixinRenderItemFrame_newMaps",
-    "MixinContainerRepair_anvilZeroLevelRecipes", "MixinAnvilOutputSlot",
+    "IAnvilSlotGetter", "MixinAnvilOutputSlot",
     "MixinMapGenStructure_canGenAtAccessor", "MixinMinecraft_getTimer",
     "ChestGenHooksGetter"
   ],
-  "//" : ["MixinContainerRepair_anvilZeroLevelRecipes$MixinAnvilOutputSlot", "MixinChestGenHooks"],
+  "//" : ["MixinContainerRepair_anvilZeroLevelRecipes$MixinAnvilOutputSlot", "MixinChestGenHooks", "MixinContainerRepair_anvilZeroLevelRecipes"],
   "client": [],
   "server": []
 }

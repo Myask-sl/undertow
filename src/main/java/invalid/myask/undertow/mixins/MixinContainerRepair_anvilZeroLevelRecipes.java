@@ -1,6 +1,5 @@
 package invalid.myask.undertow.mixins;
 
-import invalid.myask.undertow.ducks.IAnvilSlotGetter;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ContainerRepair;
 import net.minecraft.inventory.IInventory;
@@ -26,7 +25,7 @@ public abstract class MixinContainerRepair_anvilZeroLevelRecipes extends Contain
     public IInventory getInputSlots() {return inputSlots;}
 
     @Override
-    public World getWorld() { return theWorld; } //no point because the ContainerRepair isn't passed anyway, so...
+    public World getTheWorld() { return theWorld; } //no point because the ContainerRepair isn't passed anyway, so...
 
 /*    @Inject(method = "updateRepairOutput",
         at = @At(value = "INVOKE", target =
