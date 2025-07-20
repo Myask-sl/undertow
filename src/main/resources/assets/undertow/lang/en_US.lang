@@ -135,7 +135,7 @@ config.riptide.super.enable=Riptide gets fourth level that always works (nonvani
 config.drowned.throw.riptide.tridents=Drowned throw Riptide tridents, unlike player (vanilla)
 config.drowned.fly.riptide.tridents=Drowned fly Riptide tridents (when not thrown, nonvanilla)
 config.drowned.activate.channeling.tridents=Drowned-thrown Channeling tridents can make lightning bolts (1.21.2+)
-config.drowned.throw.away.tridents=Drowned lose thrown tridents like players (nonvanilla)
+config.drowned.throw.away.tridents=Drowned lose thrown tridents like players. DAMAGE BUGGED TO NOT GO DOWN (nonvanilla. Bug is vanilla.)
 
 config.drowned.equipment.odds.bedrock=Drowned get equipped when converted and have more tridents/shells, fewer fishing rods (Bedrock)
 

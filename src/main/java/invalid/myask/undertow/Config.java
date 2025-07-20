@@ -271,7 +271,7 @@ public class Config {
             drowned_make_channeling_strikes, "Drowned-thrown Channeling tridents can make lightning bolts (1.21.2+)",
             "config.drowned.activate.channeling.tridents");
         drowned_throw_away_tridents = configuration.getBoolean("drowned_throw_away_tridents", "drowned.mechanics",
-            drowned_throw_away_tridents,"Drowned lose thrown tridents like players (nonvanilla)", "config.drowned.throw.away.tridents");
+            drowned_throw_away_tridents,"Drowned lose thrown tridents like players. DAMAGE BUGGED TO NOT GO DOWN (nonvanilla. Bug is vanilla.)", "config.drowned.throw.away.tridents");
 
         drowned_equipment_odds_bedrock = configuration.getBoolean("drowned_equipment_odds_bedrock", "drowned.mechanics",
             drowned_equipment_odds_bedrock, "Drowned get equipped when converted (as Bedrock) and have more tridents/shells, fewer fishing rods (per Bedrock odds)",
