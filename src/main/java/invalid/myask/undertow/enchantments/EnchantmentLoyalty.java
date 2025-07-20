@@ -1,6 +1,9 @@
 package invalid.myask.undertow.enchantments;
 
 import net.minecraft.enchantment.EnumEnchantmentType;
+import net.minecraft.item.ItemStack;
+
+import invalid.myask.undertow.item.ItemTrident;
 
 public class EnchantmentLoyalty extends EnchantmentTrident {
     public EnchantmentLoyalty(int id, int weight) {
@@ -20,5 +23,10 @@ public class EnchantmentLoyalty extends EnchantmentTrident {
     @Override
     public String getName() {
         return "enchantment.trident.lanyard";
+    }
+
+    @Override
+    public boolean canApply(ItemStack stack) {
+        return stack.getItem() instanceof ItemTrident; //allow spears to get loyalty
     }
 }

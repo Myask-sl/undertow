@@ -1,12 +1,7 @@
 package invalid.myask.undertow.item;
 
 import com.google.common.collect.Multimap;
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.enchantments.EnchantmentRiptide;
-import invalid.myask.undertow.entities.ProjectileRiptide;
-import invalid.myask.undertow.entities.ProjectileTrident;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -23,16 +18,25 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.client.IItemEntityRendered;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.enchantments.EnchantmentRiptide;
+import invalid.myask.undertow.entities.ProjectileRiptide;
+import invalid.myask.undertow.entities.ProjectileTrident;
 import invalid.myask.undertow.UndertowEnchantments;
 
 import static invalid.myask.undertow.util.UndertowUtils.rainCheck;
 
 //import xonin.backhand.api.core.IOffhandInventory;
 
-public class ItemTrident extends Item {
+public class ItemTrident extends Item implements IItemEntityRendered {
     protected float trident_damage;
+    protected ResourceLocation resLoc;
 
     public ItemTrident() {
         this(9);}
@@ -167,5 +171,27 @@ public class ItemTrident extends Item {
 
     public float getTridentDamage() {
         return trident_damage;
+    }
+
+    @Override
+    public ResourceLocation getResLoc() {
+        return resLoc;
+    }
+
+    @Override
+    public boolean setResLoc(String s){
+        resLoc = new ResourceLocation(s);
+        return (resLoc != null);
+    }
+
+    @Override
+    public boolean setResLoc(String modID, String loc) {
+        resLoc = new ResourceLocation(modID, loc);
+        return (resLoc != null);
+    }
+
+    @Override
+    public void setResLoc(ResourceLocation rl) {
+        resLoc = rl;
     }
 }

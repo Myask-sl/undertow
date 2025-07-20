@@ -1,12 +1,9 @@
 package invalid.myask.undertow.client;
 
+import org.lwjgl.opengl.GL11;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.entities.ProjectileTrident;
-import invalid.myask.undertow.util.UndertowUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -17,11 +14,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.client.IItemRenderer;
-import org.lwjgl.opengl.GL11;
+
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.entities.ProjectileTrident;
+import invalid.myask.undertow.item.ItemTrident;
+import invalid.myask.undertow.util.UndertowUtils;
 
 public class RenderTrident extends Render implements IItemRenderer {
     public static final RenderTrident instance = new RenderTrident();
-    protected static final ResourceLocation TRITEX = new ResourceLocation(Undertow.MODID, "textures/entity/trident.png");
+    public static final ResourceLocation TRITEX = new ResourceLocation(Undertow.MODID, "textures/entity/trident.png");
+    public static final ResourceLocation SPEARTEX = new ResourceLocation(Undertow.MODID, "textures/entity/spear_flint.png");
 
     private static final Vec3 EQUIP_FP_POS = Vec3.createVectorHelper(0.0, -.3 ,0.85);
     private static final float EQUIP_FP_YAW = 75;
@@ -97,8 +101,13 @@ public class RenderTrident extends Render implements IItemRenderer {
         return getEntityTexture((ProjectileTrident) e);
     }
 
-    protected ResourceLocation getEntityTexture(ProjectileTrident dent){
-        return TRITEX;
+    protected ResourceLocation getEntityTexture(ProjectileTrident dent) {
+        ResourceLocation result = null;
+        ItemStack theDent = dent.getStack();
+        if (theDent != null && theDent.getItem() instanceof ItemTrident theRealDent)
+            result = theRealDent.getResLoc();
+        if (result == null) result = TRITEX;
+        return result;
     }
 
     @Override

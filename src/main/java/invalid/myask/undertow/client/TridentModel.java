@@ -25,6 +25,7 @@ public class TridentModel extends ModelBase {
         bb_main.setTextureOffset(0, 0).addBox(-3.0F, 12.0F, 0.0F, 1, 4, 1, 0.0F); //, false));
         bb_main.setTextureOffset(0, 0).addBox(1.0F, 12.0F, 0.0F, 1, 4, 1, 0.0F); //, false));
         bb_main.setTextureOffset(8, 3).addBox(-1.0F, 13.0F, 0.0F, 1, 4, 1, 0.0F); //, false));
+        bb_main.setTextureOffset(4,9).addBox(-2.0F, 13.0F, 0.0F, 3, 2, 1, 0F); //for spear model
 //		bb_main.cubeList.add(new ModelBox(bb_main, 0, 5, -1.0F, -1.0F, 0.0F, 1, 25, 1, 0.0F)); //, false));
 //		bb_main.cubeList.add(new ModelBox(bb_main, 4, 0, -2.0F, -3.0F, 0.0F, 3, 2, 1, 0.0F)); //, false));
 //		bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -3.0F, -6.0F, 0.0F, 1, 4, 1, 0.0F)); //, false));

@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 
 public class UndertowItems {
     public static final Item TRIDENT = new ItemTrident(9).setTextureName("trident").setUnlocalizedName("trident");
+    public static final Item SPEAR_FLINT = new ItemSpear(6).setTextureName("spear_flint").setUnlocalizedName("spear_flint").setMaxDamage(131);
 
     public static final Item NAUTILUS = new Item().setUnlocalizedName("nautilus").setTextureName(Undertow.MODID + ":nautilus");
     public static final Item SEAHEART = new Item().setUnlocalizedName("seaheart").setTextureName(Undertow.MODID + ":seaheart");
@@ -21,6 +22,9 @@ public class UndertowItems {
     public static void register(){
         GameRegistry.registerItem(TRIDENT, "trident", Undertow.MODID);
         ((ItemTrident) TRIDENT).registerDispensation();
+        GameRegistry.registerItem(SPEAR_FLINT, "spear_flint", Undertow.MODID);
+        ((ItemTrident) SPEAR_FLINT).registerDispensation();
+
         GameRegistry.registerItem(NAUTILUS, "nautilus", Undertow.MODID);
         GameRegistry.registerItem(SEAHEART, "seaheart", Undertow.MODID);
 

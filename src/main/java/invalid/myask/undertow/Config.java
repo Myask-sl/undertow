@@ -117,6 +117,7 @@ public class Config {
     public static boolean enable_conduit = true;
 
     public static boolean enable_shields = true;
+    public static boolean enable_spears = true; //recipe only; it registers it regardless
 
     public static boolean enable_cartography = true;
     public static boolean enable_table_mapmaking = true;
@@ -370,6 +371,8 @@ public class Config {
 
         enable_shields = configuration.getBoolean("enable_shields", "enable.item",
             enable_shields, "Enable shields (Java Edition 1.9+)", "config.enable.items.shield");
+        enable_spears = configuration.getBoolean("enable_spears", "enable.item",
+            enable_spears, "Enable spears (nonvanilla)", "config.enable.items.spears");
 
         enable_cartography = configuration.getBoolean("enable_cartography", "enable.block",
             enable_cartography, "Enable Cartography Table (Village&Pillage+)", "config.enable.blocks.maptable");

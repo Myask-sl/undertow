@@ -5,6 +5,7 @@ potion.conduit_power.postfix=Potion of Conduit Power
 potion.dolphins_grace.postfix=Potion of Dolphin's Grace
 
 item.trident.name=Trident
+item.spear_flint.name=Flint Spear
 item.nautilus.name=Nautilus Shell
 item.seaheart.name=Heart of the Sea
 
@@ -179,6 +180,7 @@ config.poses.swimtide.ydrop.disable=If true, only crawl will immediately lower h
 config.enable.blocks.conduit=Enable conduits
 
 config.enable.items.shield=Enable shields (Java Edition 1.9+)
+config.enable.items.spears=Enable spears (nonvanilla)
 
 config.enable.blocks.maptable=Enable Cartography Table (Village&Pillage+)
 config.enable.craft.tablemaps=Enable making maps on Cartography Table (Bedrock)

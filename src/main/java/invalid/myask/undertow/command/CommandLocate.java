@@ -5,19 +5,19 @@ import java.util.Arrays;
 import java.util.List;
 import com.google.common.collect.ImmutableList;
 
-import invalid.myask.undertow.ducks.IMapGenStructure_Accessor;
-import invalid.myask.undertow.world.BuriedTreasureGen;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentTranslation;
-
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.util.UndertowUtils;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.*;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.util.UndertowUtils;
+import invalid.myask.undertow.ducks.IMapGenStructure_Accessor;
+import invalid.myask.undertow.world.BuriedTreasureGen;
 
 public class CommandLocate extends CommandBase {
     public static CommandLocate instance = new CommandLocate();

@@ -1,10 +1,5 @@
 package invalid.myask.undertow.enchantments;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.UndertowEnchantments;
-import invalid.myask.undertow.entities.EntityCalledLightning;
-import invalid.myask.undertow.entities.ProjectileTrident;
-import invalid.myask.undertow.item.ItemTrident;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -14,6 +9,13 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.world.World;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.UndertowEnchantments;
+import invalid.myask.undertow.entities.EntityCalledLightning;
+import invalid.myask.undertow.entities.ProjectileTrident;
+import invalid.myask.undertow.item.ItemSpear;
+import invalid.myask.undertow.item.ItemTrident;
 
 public class EnchantmentChanneling extends Enchantment {
     public EnchantmentChanneling(int id, int weight) {
@@ -76,7 +78,7 @@ public class EnchantmentChanneling extends Enchantment {
 
     @Override
     public boolean canApply(ItemStack stack) {
-        return (Config.channeling_trident_applicable && stack.getItem() instanceof ItemTrident) ||
+        return (Config.channeling_trident_applicable && stack.getItem() instanceof ItemTrident && !(stack.getItem() instanceof ItemSpear)) ||
             (Config.channeling_sword_applicable && stack.getItem() instanceof ItemSword);
     }
 }

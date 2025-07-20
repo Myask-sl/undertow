@@ -20,6 +20,15 @@ public class UndertowRecipes {
 
     public static void registerRecipes() {
         OreDictionary.registerOre("paper", Items.paper);
+        if (Config.enable_spears) {
+            GameRegistry.addRecipe(new ShapedOreRecipe(UndertowItems.SPEAR_FLINT,
+                " sF",
+                " /s",
+                "/  ",
+                's', Items.string,
+                'F', Items.flint,
+                '/', "stickWood"));
+        }
         if (Config.enable_shields) {
             GameRegistry.addRecipe(new ShapedOreRecipe(UndertowItems.SHIELD,
                 "#-#",

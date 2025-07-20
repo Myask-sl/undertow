@@ -1,8 +1,8 @@
 package invalid.myask.undertow.command;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.item.ItemExplorerMap;
-import invalid.myask.undertow.util.UndertowUtils;
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -11,8 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.MapGenStructure;
 
-import java.util.ArrayList;
-import java.util.List;
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.item.ItemExplorerMap;
+import invalid.myask.undertow.util.UndertowUtils;
 
 public class CommandGiveMapTo extends CommandBase {
     public static CommandGiveMapTo instance = new CommandGiveMapTo();
