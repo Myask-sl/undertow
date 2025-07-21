@@ -1,8 +1,5 @@
-potion.conduit_power=Conduit Power
-potion.dolphins_grace=Dolphin's Grace
-
-potion.conduit_power.postfix=Potion of Conduit Power
-potion.dolphins_grace.postfix=Potion of Dolphin's Grace
+tile.cartography_table.name=Cartography Table
+tile.prismarine_raw.name=Raw Prismarine
 
 item.trident.name=Trident
 item.spear_flint.name=Flint Spear
@@ -26,6 +23,12 @@ item.explorer_map.mansion.name=Woodland Explorer Map
 item.null.name=§CSomeone forgot to §4§nname§C this Item!§r
 
 entity.drowned.name=Drowned
+
+potion.conduit_power=Conduit Power
+potion.dolphins_grace=Dolphin's Grace
+
+potion.conduit_power.postfix=Potion of Conduit Power
+potion.dolphins_grace.postfix=Potion of Dolphin's Grace
 
 enchantment.curse.durability=§CCurse of Breaking§r
 enchantment.curse.damage.all=§CCurse of Weakness§r
