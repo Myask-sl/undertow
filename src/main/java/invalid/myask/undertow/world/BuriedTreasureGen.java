@@ -185,7 +185,7 @@ public class BuriedTreasureGen extends MapGenStructure {
         }
     }
     public static void registerPiece(){
-        MapGenStructureIO.func_143031_a(BuriedTreasureComponent.class, "undertow:treasurechestcomp");
+        MapGenStructureIO.func_143031_a(BuriedTreasureComponent.class, "treasurechestcomp");
     }
 
     public class BuriedTreasureComponent extends StructureComponent {

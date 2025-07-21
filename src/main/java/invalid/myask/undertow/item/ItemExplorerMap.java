@@ -30,7 +30,7 @@ public class ItemExplorerMap extends ItemDecoMap {
         MapData mapData = Items.filled_map.getMapData(s, w);
         NBTTagCompound nbt = s.getTagCompound();
         if (nbt == null) nbt = new NBTTagCompound();
-        ((IMapGenStructure_Accessor)target).assureWorld(w);
+        ((IMapGenStructure_Accessor)target).undertow$assureWorld(w);
         ChunkCoordIntPair theSpot = UndertowUtils.locateStructure(target, w, x, z, Config.explorer_map_search_radius, !Config.explorer_map_always_unfound, true,
             (target instanceof MapGenScatteredFeature) ? UndertowUtils.getTempleBiomeByName(targetname) : null);
         mapData.xCenter = theSpot.chunkXPos * 16;

@@ -71,7 +71,7 @@ public class CommandLocate extends CommandBase {
 //            if (args.length > 4) throw new CommandException("commands.err.args.surfeit");
             if (!UndertowUtils.structureNamesContain(args[0])) throw new CommandException("commands.err.structure.invalid");
             MapGenStructure target = UndertowUtils.getStructureByName(args[0]);
-            ((IMapGenStructure_Accessor)target).assureWorld(sender.getEntityWorld());
+            ((IMapGenStructure_Accessor)target).undertow$assureWorld(sender.getEntityWorld());
             BiomeGenBase biome = (target instanceof MapGenScatteredFeature) ? UndertowUtils.getTempleBiomeByName(args[0]) : null;
             if (args.length > 1) radius = parseIntWithMin(sender, args[1], 0);
             if (args.length > 2) explored = parseBoolean(sender, UndertowUtils.broadenBoolString(args[2]));

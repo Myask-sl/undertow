@@ -1,8 +1,8 @@
 package invalid.myask.undertow.util;
 
 import com.google.common.collect.ImmutableSet;
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.ducks.IMapGenStructure_Accessor;
+import java.util.*;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -15,7 +15,8 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenScatteredFeature;
 import net.minecraft.world.gen.structure.MapGenStructure;
 
-import java.util.*;
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.ducks.IMapGenStructure_Accessor;
 
 import static net.minecraft.util.MathHelper.abs;
 
@@ -26,10 +27,14 @@ public class UndertowUtils {
     private static final Map<String, BiomeGenBase> templeBiomeMap = new HashMap<>();
 
     public static void noteStructGen(MapGenStructure mGS) {
-        String s = mGS.func_143025_a();
+        String s = mGS.func_143025_a(),
+            modId = ((IMapGenStructure_Accessor)mGS).undertow$getModId(),
+            withMod = modId + ":" + s;
         structureTypeMap.put(s, mGS);
+        structureTypeMap.put(withMod, mGS);
         structureNameList.add(s);
-        if (mGS instanceof MapGenScatteredFeature && !structureTypeMap.containsKey("templeDesert")) {
+        structureNameList.add(withMod);
+        if (modId.equals("minecraft") && mGS instanceof MapGenScatteredFeature && !structureTypeMap.containsKey("templeDesert")) {
             structureTypeMap.put("templeDesert", mGS);
             structureTypeMap.put("templeJungle", mGS);
             structureTypeMap.put("witchHutSwamp", mGS);
