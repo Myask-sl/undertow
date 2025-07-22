@@ -1,7 +1,9 @@
 package invalid.myask.undertow.entities;
 
 import java.util.List;
+import io.netty.buffer.ByteBuf;
 
+import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.Enchantment;
@@ -12,6 +14,7 @@ import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.play.server.S2BPacketChangeGameState;
@@ -23,7 +26,7 @@ import invalid.myask.undertow.enchantments.EnchantmentChanneling;
 import invalid.myask.undertow.UndertowEnchantments;
 import invalid.myask.undertow.item.ItemTrident;
 
-public class ProjectileTrident extends EntityArrow {
+public class ProjectileTrident extends EntityArrow implements IEntityAdditionalSpawnData {
     private static final int DESPAWN_MINUTES = 5;
     private static final float GRAVITY_DROP = 0.05F;
 
@@ -54,7 +57,7 @@ public class ProjectileTrident extends EntityArrow {
     protected static Vec3 hitBounceVector = Vec3.createVectorHelper( -0.05, 0.25, -0.05);
     protected boolean willHit;
 
-    public ProjectileTrident(World world) {
+    public ProjectileTrident(World world) { //called clientside by reflection
         super(world);
         init_helper();
     }
@@ -157,8 +160,8 @@ public class ProjectileTrident extends EntityArrow {
         nbt.setByte("pickup", (byte)this.canBePickedUp);
         if (player_name != null)
             nbt.setString("player_owner", player_name);
-        NBTTagCompound shootNBTs = nbt.getCompoundTag("shooter"),
-            stackNBTs = nbt.getCompoundTag("stack");
+        NBTTagCompound shootNBTs = nbt.getCompoundTag("tridentshooter"),
+            stackNBTs = nbt.getCompoundTag("tridentstack");
         if (shootingEntity != null)
             shootingEntity.writeToNBT(shootNBTs);
         if (thingy != null) thingy.writeToNBT(stackNBTs);
@@ -200,7 +203,7 @@ public class ProjectileTrident extends EntityArrow {
             shootingEntity.readFromNBT(nbt.getCompoundTag("tridentshooter"));
         }
         if (nbt.hasKey("tridentstack")) {
-            ItemStack.loadItemStackFromNBT(nbt.getCompoundTag("tridentstack"));
+            thingy = ItemStack.loadItemStackFromNBT(nbt.getCompoundTag("tridentstack"));
             populate_fields_from_stack(thingy);
         }
     }
@@ -612,4 +615,14 @@ public class ProjectileTrident extends EntityArrow {
     }
 
     public boolean isLoyal() { return loyal > 0; }
+
+    @Override
+    public void writeSpawnData(ByteBuf buffer) {
+        buffer.writeInt(Item.getIdFromItem(thingy.getItem()));
+    }
+
+    @Override
+    public void readSpawnData(ByteBuf additionalData) {
+        thingy = new ItemStack(Item.getItemById(additionalData.readInt()));
+    }
 }

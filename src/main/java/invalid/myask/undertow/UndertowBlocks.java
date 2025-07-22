@@ -12,7 +12,7 @@ import invalid.myask.undertow.blocks.BlockPlain;
 public class UndertowBlocks {
     public static final Block CARTOGRAPHY_TABLE = new BlockCartographyTable(Material.wood).setBlockName("cartography_table").setBlockTextureName("maptable");
     public static final Block CONDUIT = new BlockConduit();
-    public static final Block RAW_PRISMARINE = new BlockPlain(Material.rock).setBlockName("prismarine_raw").setBlockTextureName("prismarine_raw").setHardness(3.0F);
+    public static final Block RAW_PRISMARINE = new BlockPlain(Material.rock).setModdedTextureName("prismarine_raw").setBlockName("prismarine_raw").setHardness(3.0F);
     public static void register() {
         GameRegistry.registerBlock(CARTOGRAPHY_TABLE, "cartography_table");
         GameRegistry.registerBlock(RAW_PRISMARINE, "prismarine_raw");

@@ -102,9 +102,11 @@ public class RenderTrident extends Render implements IItemRenderer {
     }
 
     protected ResourceLocation getEntityTexture(ProjectileTrident dent) {
+        return getStackTexture(dent.getStack());
+    }
+    protected ResourceLocation getStackTexture(ItemStack dentStack) {
         ResourceLocation result = null;
-        ItemStack theDent = dent.getStack();
-        if (theDent != null && theDent.getItem() instanceof ItemTrident theRealDent)
+        if (dentStack != null && dentStack.getItem() instanceof ItemTrident theRealDent)
             result = theRealDent.getResLoc();
         if (result == null) result = TRITEX;
         return result;
@@ -153,7 +155,7 @@ public class RenderTrident extends Render implements IItemRenderer {
                 }
             }*/
             case EQUIPPED_FIRST_PERSON -> {
-                this.bindTexture(TRITEX);
+                this.bindTexture(getStackTexture(item));
                 if (data.length >= 2 && data[1] instanceof EntityPlayer alex && alex.isUsingItem()) {
                     float ticks = alex.getItemInUseDuration() + fracTick;
                     if (ticks > 10) ticks = 10;
@@ -181,7 +183,7 @@ public class RenderTrident extends Render implements IItemRenderer {
                 blat.bb_main.render(0.0625F);
             }
             case EQUIPPED -> {
-                this.bindTexture(TRITEX);
+                this.bindTexture(getStackTexture(item));
                 if (data.length >= 2 && ((data[1] instanceof EntityPlayer alex && alex.isUsingItem())
                     || data[1] instanceof EntityDrowned eddy && eddy.spearPosing())) {
                     IUndertowPosableEntity undertowPosable = (IUndertowPosableEntity) data[1];

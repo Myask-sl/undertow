@@ -7,7 +7,7 @@ import net.minecraft.entity.EntityList;
 
 public class UndertowEntities {
     public static void register(){
-        EntityRegistry.registerModEntity(ProjectileTrident.class, "projectile.trident", 0, Undertow.instance, 112, 1, true);
+        EntityRegistry.registerModEntity(ProjectileTrident.class, "projectile.trident", 0, Undertow.instance, 112, 20, true);
 
         EntityRegistry.registerModEntity(EntityDrowned.class, "drowned", 1, Undertow.instance, 128, 5, false);
 
