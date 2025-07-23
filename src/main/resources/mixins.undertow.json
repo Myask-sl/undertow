@@ -15,6 +15,7 @@
     "MixinRenderPlayer_flagHandRender", "MixinEntityRenderer_poseCamera", "MixinRenderPlayer_poseEquipment",
     "MixinRenderManager_boundingBoxDisplayFixForPoses", "MixinModelBiped_NewPoses",
     "MixinRenderItemFrame_newMaps",
+    "MixinEntityLivingBase_ladderfixes",
     "IAnvilSlotGetter", "MixinAnvilOutputSlot",
     "MixinMapGenStructure_canGenAtAccessor", "MixinMinecraft_getTimer",
     "ChestGenHooksGetter"

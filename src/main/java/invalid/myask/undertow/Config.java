@@ -113,6 +113,8 @@ public class Config {
     public static float swim_y_multiplier = 0.25F; //silly swim around 1
     public static boolean prevent_swim_riptide_posemove = false;
 
+    public static float ladder_fastfall_pitch = 60F;
+
 ///Item/Block Enables
     public static boolean enable_conduit = true;
 
@@ -365,6 +367,9 @@ public class Config {
             prevent_swim_riptide_posemove, "If true, only crawl will immediately lower hitbox.",
             "config.poses.swimtide.ydrop.disable");
 
+        ladder_fastfall_pitch = configuration.getFloat("ladder_fastfall_pitch", "ladders",
+            ladder_fastfall_pitch, -91, 91, "Minimum angle below which to fastfall on ladders, in degrees. Remember, positive is looking down. (nonvanilla)",
+            "config.ladder.fastfall.pitch");
 
         enable_conduit = configuration.getBoolean("enable_conduit", "enable.block",
             enable_conduit, "Enable conduits (vanilla, 1.13+)", "config.enable.blocks.conduit");
