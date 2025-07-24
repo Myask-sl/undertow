@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.client.IItemEntityRendered;
+import invalid.myask.undertow.client.item.IItemEntityRendered;
 
 public class ItemShield extends Item implements IItemEntityRendered {
     public static final int VANILLA_SHIELD_DURABILITY = 336;

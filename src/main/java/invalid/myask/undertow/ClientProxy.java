@@ -4,12 +4,18 @@ import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import invalid.myask.undertow.client.settings.UndertowKeybinds;
-import invalid.myask.undertow.client.*;
-import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.entities.ProjectileTrident;
 import net.minecraft.client.renderer.entity.RenderArrow;
 import net.minecraftforge.client.MinecraftForgeClient;
+
+import invalid.myask.undertow.client.entity.ModelDrowned;
+import invalid.myask.undertow.client.entity.RenderDrowned;
+import invalid.myask.undertow.client.item.IItemEntityRendered;
+import invalid.myask.undertow.client.item.RenderDumbMap;
+import invalid.myask.undertow.client.item.RenderShield;
+import invalid.myask.undertow.client.item.RenderTrident;
+import invalid.myask.undertow.client.settings.UndertowKeybinds;
+import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.entities.ProjectileTrident;
 
 public class ClientProxy extends CommonProxy {
 

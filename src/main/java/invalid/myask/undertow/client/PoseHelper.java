@@ -5,6 +5,7 @@ import org.lwjgl.opengl.GL11;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 
+import invalid.myask.undertow.client.item.RenderRiptide;
 import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 import invalid.myask.undertow.mixins.MixinMinecraft_getTimer;
 

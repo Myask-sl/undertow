@@ -1,4 +1,4 @@
-package invalid.myask.undertow.client;
+package invalid.myask.undertow.client.entity;
 
 import org.lwjgl.opengl.GL11;
 

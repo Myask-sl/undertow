@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 
 import invalid.myask.undertow.Config;
 import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.client.IItemEntityRendered;
+import invalid.myask.undertow.client.item.IItemEntityRendered;
 import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 import invalid.myask.undertow.enchantments.EnchantmentRiptide;
 import invalid.myask.undertow.entities.ProjectileRiptide;

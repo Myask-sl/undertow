@@ -1,4 +1,4 @@
-package invalid.myask.undertow.client;
+package invalid.myask.undertow.client.item;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

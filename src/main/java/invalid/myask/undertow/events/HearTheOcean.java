@@ -33,7 +33,7 @@ import net.minecraftforge.event.world.BlockEvent;
 import invalid.myask.undertow.Config;
 import invalid.myask.undertow.Undertow;
 import invalid.myask.undertow.client.PoseHelper;
-import invalid.myask.undertow.client.RenderFramedMap;
+import invalid.myask.undertow.client.item.RenderFramedMap;
 import invalid.myask.undertow.entities.EntityCalledLightning;
 import invalid.myask.undertow.entities.EntityDrowned;
 import invalid.myask.undertow.entities.ProjectileTrident;

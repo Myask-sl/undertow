@@ -1,4 +1,4 @@
-package invalid.myask.undertow.client;
+package invalid.myask.undertow.client.entity;
 
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.model.ModelZombie;

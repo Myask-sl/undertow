@@ -1,4 +1,4 @@
-package invalid.myask.undertow.client;
+package invalid.myask.undertow.client.item;
 
 // Made with Blockbench 4.12.2
 // Exported for Minecraft version 1.7 - 1.12
