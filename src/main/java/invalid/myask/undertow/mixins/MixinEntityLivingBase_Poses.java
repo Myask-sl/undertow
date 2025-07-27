@@ -148,7 +148,7 @@ public abstract class MixinEntityLivingBase_Poses extends Entity implements IUnd
         if (((EntityLivingBase) (Entity) this) instanceof EntityDrowned mermo) {
             undertow$spearPosing = mermo.spearPosing();
         } else if (((EntityLivingBase) (Entity) this) instanceof EntityPlayer groucho) {
-            undertow$spearPosing = groucho.getItemInUse() != null && groucho.getItemInUse().getItem() instanceof ItemTrident;
+            undertow$spearPosing = groucho.isUsingItem() && groucho.getCurrentEquippedItem().getItem() instanceof ItemTrident;
         }
         else undertow$spearPosing = false;
         return undertow$spearPosing;

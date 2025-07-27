@@ -71,7 +71,7 @@ public class HearTheOcean {
         } else if (!event.source.isDamageAbsolute() && !event.source.isUnblockable()
             && event.source instanceof EntityDamageSource eds
             && event.entityLiving instanceof EntityPlayer p && p.isUsingItem()) {
-            ItemStack stack = p.getItemInUse(); //oh hey, free Backhand compat
+            ItemStack stack = p.getCurrentEquippedItem(); //oh hey, free Backhand compat
 
             if (stack.getItem() instanceof ItemShield shield) {
                 Entity hitWith = eds.getSourceOfDamage();

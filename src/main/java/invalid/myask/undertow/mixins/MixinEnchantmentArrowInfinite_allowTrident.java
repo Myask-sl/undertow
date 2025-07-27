@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(EnchantmentArrowInfinite.class)
-public class MixinEnchantmentArrowInfinite extends Enchantment {
-    protected MixinEnchantmentArrowInfinite(int id, int weight, EnumEnchantmentType type) {
+public class MixinEnchantmentArrowInfinite_allowTrident extends Enchantment {
+    protected MixinEnchantmentArrowInfinite_allowTrident(int id, int weight, EnumEnchantmentType type) {
         super(id, weight, type);
     }
 

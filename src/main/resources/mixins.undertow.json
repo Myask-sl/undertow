@@ -18,7 +18,8 @@
     "MixinEntityLivingBase_ladderfixes",
     "IAnvilSlotGetter", "MixinAnvilOutputSlot",
     "MixinMapGenStructure_canGenAtAccessor", "MixinMinecraft_getTimer",
-    "ChestGenHooksGetter"
+    "ChestGenHooksGetter",
+    "MixinEnchantmentArrowInfinite_allowTrident"
   ],
   "//" : [ "MixinChestGenHooks"],
   "client": [],

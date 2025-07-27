@@ -42,9 +42,9 @@ public class MixinModelBiped_NewPoses extends ModelBase {
     @Shadow
     public ModelRenderer bipedHeadwear;
     @Shadow
-    private ModelRenderer bipedLeftLeg;
+    public ModelRenderer bipedLeftLeg;
     @Shadow
-    private ModelRenderer bipedRightLeg;
+    public ModelRenderer bipedRightLeg;
     @Shadow
     public boolean isSneak;
 
@@ -78,9 +78,9 @@ public class MixinModelBiped_NewPoses extends ModelBase {
             IUndertowPosableEntity iUPO = ((IUndertowPosableEntity) zeppo);
             if (iUPO.undertow$clearHandRendering()) return; //rendering a hand!
 //            iUPO.undertow$setCrawling(zeppo.isSneaking());
-            if (zeppo.getItemInUse() != null) {
-                if (zeppo.getItemInUse().getItem() instanceof ItemTrident) {
-                    if (zeppo.getItemInUse() == zeppo.getCurrentEquippedItem()) //right/main hand
+            if (zeppo.getItemInUse() != null) { //fn is fine, this is clientside
+                if (iUPO.undertow$isSpearPosing()) {
+                    if (!Backhand.passthrough.isUsingOffhand(zeppo)) //right/main hand
                         bipedRightArm.rotateAngleX += (float) Math.PI;
                     else //left/offhand
                         bipedLeftArm.rotateAngleX += (float) Math.PI;
