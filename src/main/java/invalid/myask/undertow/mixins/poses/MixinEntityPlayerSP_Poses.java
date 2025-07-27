@@ -1,16 +1,18 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import com.mojang.authlib.GameProfile;
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.network.PoseChangeMessage;
-import net.minecraft.client.entity.AbstractClientPlayer;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+
+import com.mojang.authlib.GameProfile;
+import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.world.World;
+
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.network.PoseChangeMessage;
 
 @Mixin(EntityPlayerSP.class)
 public abstract class MixinEntityPlayerSP_Poses extends AbstractClientPlayer {

@@ -1,16 +1,18 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.maplocate;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import invalid.myask.undertow.Undertow;
-import invalid.myask.undertow.item.IBackportedMap;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.tileentity.RenderItemFrame;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
+
+import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.item.IBackportedMap;
 
 @Mixin(RenderItemFrame.class)
 public abstract class MixinRenderItemFrame_newMaps extends Render {

@@ -1,14 +1,16 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import com.mojang.authlib.GameProfile;
-import invalid.myask.undertow.Config;
-import net.minecraft.client.entity.AbstractClientPlayer;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.world.World;
 import org.spongepowered.asm.lib.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+
+import com.mojang.authlib.GameProfile;
+import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.world.World;
+
+import invalid.myask.undertow.Config;
 
 @Mixin(EntityPlayerSP.class)
 public abstract class MixinEntityPlayerSP_swim extends AbstractClientPlayer {

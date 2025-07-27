@@ -1,12 +1,14 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.enchants;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.item.ItemTrident;
+import org.spongepowered.asm.mixin.Mixin;
+
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentArrowInfinite;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.ItemStack;
-import org.spongepowered.asm.mixin.Mixin;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.item.ItemTrident;
 
 @Mixin(EnchantmentArrowInfinite.class)
 public class MixinEnchantmentArrowInfinite_allowTrident extends Enchantment {

@@ -1,10 +1,11 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
+
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(EntityPlayer.class)
 public abstract class MixinEntityPlayer_Crawl extends EntityLivingBase { //TODO: delete

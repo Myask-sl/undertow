@@ -1,4 +1,4 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.maplocate;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;

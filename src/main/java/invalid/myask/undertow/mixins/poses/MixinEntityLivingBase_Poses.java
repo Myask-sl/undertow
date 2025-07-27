@@ -1,11 +1,12 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.item.ItemTrident;
-import invalid.myask.undertow.network.PoseChangeMessage;
-import invalid.myask.undertow.util.UndertowUtils;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
 import net.minecraft.client.entity.EntityOtherPlayerMP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
@@ -16,12 +17,13 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.item.ItemTrident;
+import invalid.myask.undertow.network.PoseChangeMessage;
+import invalid.myask.undertow.util.UndertowUtils;
 
 import static net.minecraft.util.MathHelper.abs;
 
@@ -253,10 +255,11 @@ public abstract class MixinEntityLivingBase_Poses extends Entity implements IUnd
         return (undertow$crawling || undertow$rippingTide || undertow$swimming) ? 2 : isSneaking() ? 1 : 0;
     }
 
-    private void updateBox(EntityLivingBase entLi) {
+    @Unique
+    private void undertow$updateBoundingBox(EntityLivingBase entLi) {
         int shallSmall = undertow$smallPosed();
 //        boolean otherSmall = oldHeight == 0.6F;
-        if (entLi instanceof EntityPlayer eP) {//TODO: elytra for shallSmall
+        if (entLi instanceof EntityPlayer eP) {
             if (eP.isPlayerSleeping()) return; ///does this version even make player small then?
         }
 
@@ -325,7 +328,7 @@ public abstract class MixinEntityLivingBase_Poses extends Entity implements IUnd
             undertow$init = false;
         }
         undertow$heightPoseCheck(((EntityLivingBase) (Object)this));
-        updateBox((EntityLivingBase) (Object)this);
+        undertow$updateBoundingBox((EntityLivingBase) (Object)this);
     }
 
     @Inject(method = "onUpdate", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;onUpdate()V",

@@ -1,10 +1,12 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import net.minecraft.client.entity.EntityClientPlayerMP;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+
+import net.minecraft.client.entity.EntityClientPlayerMP;
+
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 
 @Mixin(EntityClientPlayerMP.class)
 public class MixinEntityClientPlayerMP_forcemovepacket { //TODO: delete

@@ -1,12 +1,14 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import net.minecraft.client.Minecraft;
-import net.minecraft.util.MovementInputFromOptions;
 import org.spongepowered.asm.lib.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.MovementInputFromOptions;
+
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 
 @Mixin(MovementInputFromOptions.class)
 public class MixinMovementInputFromOptions_poses {

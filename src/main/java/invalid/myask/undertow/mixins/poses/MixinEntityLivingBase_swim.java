@@ -1,17 +1,19 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 
 @Mixin(EntityLivingBase.class)
 public abstract class MixinEntityLivingBase_swim extends Entity {

@@ -1,13 +1,14 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
-import net.minecraft.client.renderer.entity.RenderPlayer;
-import net.minecraft.entity.player.EntityPlayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import net.minecraft.client.renderer.entity.RenderPlayer;
+import net.minecraft.entity.player.EntityPlayer;
 
 @Mixin(RenderPlayer.class)
 public class MixinRenderPlayer_flagHandRender {

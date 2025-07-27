@@ -1,13 +1,13 @@
-package invalid.myask.undertow.mixins;
-
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.world.World;
+package invalid.myask.undertow.mixins.enchants;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.world.World;
 
 import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 import invalid.myask.undertow.enchantments.EnchantmentSwiftSwim;

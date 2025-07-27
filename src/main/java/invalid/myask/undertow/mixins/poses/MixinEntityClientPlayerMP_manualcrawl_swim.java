@@ -1,17 +1,19 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.poses;
 
-import invalid.myask.undertow.Config;
-import invalid.myask.undertow.client.settings.UndertowKeybinds;
-import invalid.myask.undertow.ducks.IUndertowPosableEntity;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.util.Session;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
+
+import invalid.myask.undertow.Config;
+import invalid.myask.undertow.client.settings.UndertowKeybinds;
+import invalid.myask.undertow.ducks.IUndertowPosableEntity;
 
 @Mixin(EntityClientPlayerMP.class)
 public class MixinEntityClientPlayerMP_manualcrawl_swim extends EntityPlayerSP {

@@ -1,15 +1,17 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.enchants;
 
-import invalid.myask.undertow.enchantments.EnchantmentExtendedDamage;
+import org.spongepowered.asm.mixin.Mixin;
+
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EnumCreatureAttribute;
+import net.minecraft.entity.passive.EntityWaterMob;
 import net.minecraft.world.World;
 
-/* import astrotibs.villagenames.prismarine.guardian.entity.monster.EntityGuardian;
+import invalid.myask.undertow.enchantments.EnchantmentExtendedDamage;
 
-@Mixin(EntityGuardian.class) */
-public class MixinEntityGuardian_Impaling extends EntityCreature {
-    public MixinEntityGuardian_Impaling(World w) {
+@Mixin(EntityWaterMob.class)
+public class MixinEntityWaterMob_Impaling extends EntityCreature {
+    public MixinEntityWaterMob_Impaling(World w) {
         super(w);
     }
 

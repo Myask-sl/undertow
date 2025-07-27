@@ -1,15 +1,17 @@
-package invalid.myask.undertow.mixins;
+package invalid.myask.undertow.mixins.enchants;
 
-import invalid.myask.undertow.enchantments.EnchantmentDepthStrider;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.world.World;
+
+import invalid.myask.undertow.enchantments.EnchantmentDepthStrider;
 
 @Mixin(EntityLivingBase.class)
 public abstract class MixinEntityLivingBase_DepthStrider extends Entity {
