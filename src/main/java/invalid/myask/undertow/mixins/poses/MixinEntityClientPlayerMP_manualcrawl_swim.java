@@ -49,8 +49,9 @@ public class MixinEntityClientPlayerMP_manualcrawl_swim extends EntityPlayerSP {
                 }
             }
             if (Config.enable_crawl_keybind) {
-                if (Config.key_toggles_crawl && UndertowKeybinds.crawl.isPressed()) {
-                    undertow$manuallyCrawled = !undertow$manuallyCrawled;
+                if (Config.key_toggles_crawl) {
+                    if (UndertowKeybinds.crawl.isPressed())
+                        undertow$manuallyCrawled = !undertow$manuallyCrawled;
                 }
                 else undertow$manuallyCrawled = UndertowKeybinds.crawl.getIsKeyPressed();
             }
