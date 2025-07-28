@@ -1,10 +1,12 @@
 package invalid.myask.undertow.events;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.common.eventhandler.Event;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -27,6 +29,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityStruckByLightningEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.ZombieEvent;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
+import net.minecraftforge.event.entity.player.EntityInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
@@ -36,6 +40,7 @@ import invalid.myask.undertow.client.PoseHelper;
 import invalid.myask.undertow.client.item.RenderFramedMap;
 import invalid.myask.undertow.entities.EntityCalledLightning;
 import invalid.myask.undertow.entities.EntityDrowned;
+import invalid.myask.undertow.entities.fish.BaseFish;
 import invalid.myask.undertow.entities.ProjectileTrident;
 import invalid.myask.undertow.item.IBackportedMap;
 import invalid.myask.undertow.item.ItemShield;
@@ -226,5 +231,41 @@ public class HearTheOcean {
     @SubscribeEvent
     public void popPoses(RenderPlayerEvent.Specials.Post event) {
         GL11.glPopMatrix();
+    }
+
+    @SubscribeEvent
+    public void despawnAFish(LivingSpawnEvent.AllowDespawn event) {
+        if (event.entityLiving instanceof BaseFish koitsu) {
+            if (koitsu.wasBucketed()) {
+                event.setResult(Event.Result.DENY);
+                return;
+            }
+            EntityPlayer someBody = koitsu.worldObj.getClosestPlayerToEntity(koitsu, Config.fish_despawn_dist_must);
+            double distSq = koitsu.getDistanceSqToEntity(someBody);
+            if (distSq <= Config.fish_despawn_dist_may_sq) {
+                event.setResult(Event.Result.DENY);
+                return;
+            }
+            if (koitsu.getRNG().nextInt(800) == 0) {
+                event.setResult(Event.Result.ALLOW);
+                return;
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void catchLightningInABottle(EntityInteractEvent event) {
+        EntityPlayer steve = event.entityPlayer;
+        ItemStack stackIn = steve.getCurrentEquippedItem();
+        if (Config.can_bottle_lightning && event.target instanceof EntityLightningBolt &&
+            stackIn != null && stackIn.getItem() == Items.experience_bottle) {
+            stackIn.stackSize--;
+            ItemStack newBottle = new ItemStack(UndertowItems.BOTTLED_LIGHTNING, 1, 0);
+            if (stackIn.stackSize == 0) {
+                steve.inventory.setInventorySlotContents(steve.inventory.currentItem, newBottle);
+            } else if (!steve.inventory.addItemStackToInventory(newBottle)) {
+                steve.dropPlayerItemWithRandomChoice(newBottle, false);
+            }
+        }
     }
 }

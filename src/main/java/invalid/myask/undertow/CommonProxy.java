@@ -27,6 +27,8 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
+        UndertowEnchantments.init();
+
         // Undertow.LOG.info(Config.greeting);
         Undertow.LOG.info("I am " + Undertow.MODNAME + " at version " + Tags.VERSION);
         UndertowBlocks.register();

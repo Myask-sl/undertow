@@ -55,7 +55,7 @@ public class RenderShield extends Render implements IItemRenderer {
 
     private static float ENTITY_SCALE = 1F;
 
-    public static ShieldModel bonk = new ShieldModel();
+    public static ModelShield bonk = new ModelShield();
 
     @Override
     public void doRender(Entity entity, double x, double y, double z, float yaw, float fracTick) {

@@ -1,9 +1,9 @@
 package invalid.myask.undertow;
 
-
 import cpw.mods.fml.common.registry.GameRegistry;
-import invalid.myask.undertow.item.*;
 import net.minecraft.item.Item;
+
+import invalid.myask.undertow.item.*;
 
 public class UndertowItems {
     public static final Item TRIDENT = new ItemTrident(9).setTextureName("trident").setUnlocalizedName("trident");

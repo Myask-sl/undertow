@@ -1,3 +1,16 @@
+#Minecraft overrides
+item.fish.cod.raw.name=Raw Cod
+item.fish.pufferfish.raw.name=Pufferfish
+item.fish.clownfish.raw.name=Tropical fish
+item.fish.cod.cooked.name=Cooked Cod
+#And now new stuff.
+entity.drowned.name=Drowned
+entity.fish.cod.name=Cod
+entity.fish.salmon.name=Salmon
+entity.fish.puffer.name=Pufferfish
+entity.fish.clown.giant.name=Giant Clownfish
+entity.fish.clown.giant.suspicious.name=Furtive Giant Sales-clownfish
+
 tile.cartography_table.name=Cartography Table
 tile.prismarine_raw.name=Raw Prismarine
 
@@ -21,8 +34,6 @@ item.explorer_map.monument.name=Ocean Explorer Map
 item.explorer_map.mansion.name=Woodland Explorer Map
 
 item.null.name=§CSomeone forgot to §4§nname§C this Item!§r
-
-entity.drowned.name=Drowned
 
 potion.conduit_power=Conduit Power
 potion.dolphins_grace=Dolphin's Grace
@@ -201,6 +212,15 @@ config.worldgen.treasure.fine_z=Z position in chunk of buried treasure (defaults
 config.worldgen.treasure.chance.denominator=Denominator for buried treasure chance
 config.worldgen.treasure.chance.numerator=Numerator for buried treasure chance
 config.worldgen.treasure.enable=Generate buried treasure by default in overworld (dimension 0)? (vanilla true)
+
+config.fish.spawn.y.min=Minimum height(Y) for natural-spawning fish
+config.fish.spawn.y.max=Maximum height(Y) for natural-spawning fish
+config.fish.spawn.r.min=Minimum distance from closest player to spawn fish
+config.fish.spawn.r.max=Maximum distance from closest player to spawn fish
+config.fish.spawn.weirdwater=Fish can spawn in non-water waterblocks (e.g. kelp, bubble columns if added)
+config.fish.despawn.r.all=Minimum distance from player at which [non-persistent] fish instantly despawn
+config.fish.despawn.r.some=Minimum distance from player at which [non-persistent] fish randomly despawn
+config.fish.drops.bedrocklike=Whether fish drop bonemeal more-often and Lootable like Bedrock
 
 key.crawl=Crawl
 

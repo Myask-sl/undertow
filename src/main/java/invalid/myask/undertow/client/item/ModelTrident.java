@@ -8,10 +8,10 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class TridentModel extends ModelBase {
+public class ModelTrident extends ModelBase {
 	final ModelRenderer bb_main;
 
-	public TridentModel() {
+	public ModelTrident() {
 		textureWidth = 32;
 		textureHeight = 32;
 

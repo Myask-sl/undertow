@@ -7,10 +7,10 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ShieldModel extends ModelBase {
+public class ModelShield extends ModelBase {
     final ModelRenderer bb_main;
 
-    public ShieldModel() {
+    public ModelShield() {
         textureWidth = 64;
         textureHeight = 64;
 

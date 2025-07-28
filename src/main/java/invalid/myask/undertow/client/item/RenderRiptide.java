@@ -12,7 +12,7 @@ import invalid.myask.undertow.entities.ProjectileRiptide;
 public class RenderRiptide extends Render {
     public static final RenderRiptide instance = new RenderRiptide();
     public static final ResourceLocation SWIRL_TEX = new ResourceLocation(Undertow.MODID, "textures/entity/riptide.png");
-    public static final RiptideModel whoosh = new RiptideModel();
+    public static final ModelRiptide whoosh = new ModelRiptide();
 
     @Override
     public void doRender(Entity entity, double x, double y, double z, float yaw, float fracTick) {

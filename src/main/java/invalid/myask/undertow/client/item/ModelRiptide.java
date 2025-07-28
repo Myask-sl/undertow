@@ -4,11 +4,11 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class RiptideModel extends ModelBase {
+public class ModelRiptide extends ModelBase {
 
     private final ModelRenderer bone;
 
-    public RiptideModel() {
+    public ModelRiptide() {
         textureWidth = 64;
         textureHeight = 64;
 

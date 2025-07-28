@@ -147,6 +147,18 @@ public class Config {
     public static boolean generate_buried_treasure = true;
     public static boolean buried_treasure_loot_bedrock = false;
 
+    public static int fish_spawn_y_min;
+    public static int fish_spawn_y_max;
+    public static float fish_spawn_dist_min;
+    public static float fish_spawn_dist_max;
+    public static boolean fish_spawn_weirdwater = false;
+    public static float fish_despawn_dist_must;
+    public static float fish_despawn_dist_may;
+    public static float fish_despawn_dist_may_sq;
+    public static boolean fishbone_drop_bedrock = false;
+
+    public static boolean can_bottle_lightning = true; //
+
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
 
@@ -433,9 +445,39 @@ public class Config {
             generate_buried_treasure, "Generate buried treasure by default in overworld (dimension 0)? (vanilla true)",
             "config.worldgen.treasure.enable");
 
+        fish_spawn_y_min = configuration.getInt("fish_spawn_y_min", "fish.spawn",
+            50, world_height_min, world_height_max, "Minimum height(Y) for natural-spawning fish",
+            "config.fish.spawn.y.min");
+        fish_spawn_y_max = configuration.getInt("fish_spawn_y_max", "fish.spawn",
+            50, world_height_min, world_height_max, "Maximum height(Y) for natural-spawning fish",
+            "config.fish.spawn.y.max");
+        fish_spawn_dist_min = configuration.getFloat("fish_spawn_dist_min", "fish.spawn",
+            20, 0, Float.MAX_VALUE, "Minimum distance from closest player to spawn fish",
+            "config.fish.spawn.r.min");
+        fish_spawn_dist_max = configuration.getFloat("fish_spawn_dist_max", "fish.spawn",
+            64, 0, Float.MAX_VALUE, "Maximum distance from closest player to spawn fish",
+            "config.fish.spawn.r.max");
+        fish_spawn_weirdwater = configuration.getBoolean("fish_spawn_weirdwater", "fish.spawn",
+            fish_spawn_weirdwater, "Fish can spawn in non-water waterblocks (e.g. kelp, bubble columns if added)",
+            "config.fish.spawn.weirdwater");
+        fish_despawn_dist_must = configuration.getFloat("fish_despawn_dist_must", "fish.despawn",
+            64, 0, Float.MAX_VALUE, "Minimum distance from player at which [non-persistent] fish instantly despawn",
+            "config.fish.despawn.r.all");
+        fish_despawn_dist_may = configuration.getFloat("fish_despawn_dist_must", "fish.despawn",
+            40, 0, Float.MAX_VALUE, "Minimum distance from player at which [non-persistent] fish randomly despawn",
+            "config.fish.despawn.r.some");
+        fish_despawn_dist_may_sq = fish_despawn_dist_may * fish_despawn_dist_may;
+
+        fishbone_drop_bedrock = configuration.getBoolean("fishbone_drop_bedrock", "fish.drops",
+            fishbone_drop_bedrock, "Whether fish drop bonemeal more-often and Lootable like Bedrock",
+            "config.fish.drops.bedrocklike");
+
+        can_bottle_lightning = configuration.getBoolean("can_bottle_lightning", "magic",
+            can_bottle_lightning, "Whether you may bottle lightning (famously difficult. Nonvanilla)",
+            "config.magic.bottle.lightning");
+
         if (configuration.hasChanged()) {
             configuration.save();
         }
-        UndertowEnchantments.init();
     }
 }

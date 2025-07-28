@@ -65,7 +65,7 @@ public class RenderTrident extends Render implements IItemRenderer {
     private static final float ENTITY_SCALE = 0.8F;
     private static final double BACKUP_FACTOR = -0.75;
 
-    public static TridentModel blat = new TridentModel();
+    public static ModelTrident blat = new ModelTrident();
     static float fracTick;
 
     @Override
