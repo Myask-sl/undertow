@@ -20,23 +20,27 @@ import invalid.myask.undertow.util.UndertowUtils;
 
 public class CommandLocateBiome extends CommandBase {
     public static CommandLocateBiome instance = new CommandLocateBiome();
+    protected static final String name = "locatebiome";
+    protected static final String usageLangKey = "commands.locatebiome.usage";
+    protected static List<String> aliasList = ImmutableList.of("locb");
 
-    static Map<String, Integer> biomeNameMap = new HashMap<String, Integer>();
+
+    static Map<String, Integer> biomeNameMap = new HashMap<>();
     static List<String> biomeNameList = null;
 
     @Override
     public String getCommandName() {
-        return "locatebiome";
+        return name;
     }
 
     @Override
     public List<String> getCommandAliases() {
-        return ImmutableList.of("locb");
+        return aliasList;
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender) {
-        return "commands.locatebiome.usage";
+        return usageLangKey;
     }
 
     @Override
@@ -86,7 +90,7 @@ public class CommandLocateBiome extends CommandBase {
             for (BiomeGenBase biome : BiomeGenBase.getBiomeGenArray()) {
                 if (biome != null && !biome.biomeName.isEmpty()) {
                     String underscored = biome.biomeName.replace(' ', '_');
-                    biomeNameMap.put(biome.biomeName, biome.biomeID);
+                    biomeNameMap.put(underscored, biome.biomeID);
                 }
             }
             biomeNameList = new ArrayList<>(biomeNameMap.keySet());

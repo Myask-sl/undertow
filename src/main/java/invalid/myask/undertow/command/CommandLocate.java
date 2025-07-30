@@ -21,6 +21,10 @@ import invalid.myask.undertow.world.BuriedTreasureGen;
 
 public class CommandLocate extends CommandBase {
     public static CommandLocate instance = new CommandLocate();
+    protected static final String name = "locate";
+    protected static final String usageLangKey = "commands.locate.usage";
+    protected static List<String> aliasList = ImmutableList.of("loc", "locs", "locatestructure");
+
 
 /*
     static HashMap<String, Class<? extends MapGenStructure>> structMap = new HashMap<>();
@@ -41,17 +45,17 @@ public class CommandLocate extends CommandBase {
 
     @Override
     public String getCommandName() {
-        return "locate";
+        return name;
     }
 
     @Override
     public List<String> getCommandAliases() {
-        return ImmutableList.of("loc", "locs", "locatestructure");
+        return aliasList;
     }
 
     @Override
     public String getCommandUsage(ICommandSender sender) {
-        return "commands.locate.usage";
+        return usageLangKey;
     }
 
     @Override
