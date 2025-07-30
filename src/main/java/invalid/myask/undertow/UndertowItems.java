@@ -14,6 +14,9 @@ public class UndertowItems {
 
     public static final Item SHIELD = new ItemShield().setTextureName("shield").setUnlocalizedName("shield");
 
+    public static final Item BOTTLED_LIGHTNING = new ItemBottledLightning().setUnlocalizedName("bottled_lightning")
+        .setTextureName(Undertow.MODID + ":bottled_lightning");
+
     public static final ItemDumbMap FILLED_DUMB_MAP = new ItemDumbMap();
     public static final ItemEmptyDumbMap EMPTY_DUMB_MAP = new ItemEmptyDumbMap();
     public static final ItemDecoMap DECO_MAP = new ItemDecoMap();
@@ -30,8 +33,10 @@ public class UndertowItems {
 
         GameRegistry.registerItem(SHIELD, "shield", Undertow.MODID);
 
-        GameRegistry.registerItem(EMPTY_DUMB_MAP, "dumb_map");
-        GameRegistry.registerItem(FILLED_DUMB_MAP, "dumb_filled_map");
-        GameRegistry.registerItem(DECO_MAP, "decorated_map");
+        GameRegistry.registerItem(BOTTLED_LIGHTNING, "bottled_lightning", Undertow.MODID);
+
+        GameRegistry.registerItem(EMPTY_DUMB_MAP, "dumb_map", Undertow.MODID);
+        GameRegistry.registerItem(FILLED_DUMB_MAP, "dumb_filled_map", Undertow.MODID);
+        GameRegistry.registerItem(DECO_MAP, "decorated_map", Undertow.MODID);
     }
 }
