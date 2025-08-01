@@ -241,7 +241,7 @@ public class HearTheOcean {
                 return;
             }
             EntityPlayer someBody = koitsu.worldObj.getClosestPlayerToEntity(koitsu, Config.fish_despawn_dist_must);
-            double distSq = koitsu.getDistanceSqToEntity(someBody);
+            double distSq = someBody == null ? Double.MAX_VALUE : koitsu.getDistanceSqToEntity(someBody);
             if (distSq <= Config.fish_despawn_dist_may_sq) {
                 event.setResult(Event.Result.DENY);
                 return;
