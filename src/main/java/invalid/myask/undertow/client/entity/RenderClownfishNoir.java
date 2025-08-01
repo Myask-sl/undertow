@@ -11,8 +11,13 @@ import invalid.myask.undertow.Undertow;
 public class RenderClownfishNoir extends RenderLiving {
     protected static ResourceLocation NOIRFISH = new ResourceLocation(Undertow.MODID, "textures/entity/fish/clownfish_noir.png");
 
-    public RenderClownfishNoir(ModelBase mainModel, float shadowSize) {
+    public RenderClownfishNoir(ModelBase mainModel, float shadowSize, boolean noir) {
         super(mainModel, shadowSize);
+        ((ModelClownfishNoir)mainModel).setAllNoirVisible(noir);
+    }
+
+    public RenderClownfishNoir(ModelBase mainModel, float shadowSize) {
+        this(mainModel, shadowSize, false);
     }
 
     @Override

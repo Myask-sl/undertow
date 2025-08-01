@@ -9,6 +9,8 @@ import net.minecraftforge.client.MinecraftForgeClient;
 
 import invalid.myask.undertow.client.entity.ModelDrowned;
 import invalid.myask.undertow.client.entity.RenderDrowned;
+import invalid.myask.undertow.client.entity.ModelClownfishNoir;
+import invalid.myask.undertow.client.entity.RenderClownfishNoir;
 import invalid.myask.undertow.client.item.IItemEntityRendered;
 import invalid.myask.undertow.client.item.RenderDumbMap;
 import invalid.myask.undertow.client.item.RenderShield;
@@ -16,9 +18,8 @@ import invalid.myask.undertow.client.item.RenderTrident;
 import invalid.myask.undertow.client.settings.UndertowKeybinds;
 import invalid.myask.undertow.entities.EntityDrowned;
 import invalid.myask.undertow.entities.ProjectileTrident;
-import invalid.myask.undertow.client.entity.ModelClownfishNoir;
-import invalid.myask.undertow.client.entity.RenderClownfishNoir;
-import invalid.myask.undertow.entities.fish.EntityClownfishNoir;
+import invalid.myask.undertow.entities.fish.EntityGiantClownfish;
+import invalid.myask.undertow.entities.fish.EntityGiantClownfishNoir;
 
 public class ClientProxy extends CommonProxy {
 
@@ -42,7 +43,8 @@ public class ClientProxy extends CommonProxy {
         //we do that one in a mixin call to keep it rotated with the biped.
 
         RenderingRegistry.registerEntityRenderingHandler(EntityDrowned.class, new RenderDrowned(new ModelDrowned(), 0.5F, 1));
-        RenderingRegistry.registerEntityRenderingHandler(EntityClownfishNoir.class, new RenderClownfishNoir(new ModelClownfishNoir(), 0.5F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityGiantClownfish.class, new RenderClownfishNoir(new ModelClownfishNoir(), 0.5F, false));
+        RenderingRegistry.registerEntityRenderingHandler(EntityGiantClownfishNoir.class, new RenderClownfishNoir(new ModelClownfishNoir(), 0.6F, true));
 
         FMLCommonHandler.instance().bus().register(RenderTrident.instance); //getting timer
 
