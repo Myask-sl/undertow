@@ -14,7 +14,8 @@ entity.fish.clown.giant.suspicious.name=Furtive Giant Sales-clownfish
 tile.cartography_table.name=Cartography Table
 tile.prismarine_raw.name=Raw Prismarine
 
-item.trident.name=Trident
+item.trident.name=Old Trident
+item.trident_bronze.name=Bronze Trident
 item.spear_flint.name=Flint Spear
 item.nautilus.name=Nautilus Shell
 item.seaheart.name=Heart of the Sea

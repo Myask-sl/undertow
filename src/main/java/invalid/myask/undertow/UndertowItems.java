@@ -6,7 +6,10 @@ import net.minecraft.item.Item;
 import invalid.myask.undertow.item.*;
 
 public class UndertowItems {
+    //traditional Minecraft drowned-borne trident
     public static final Item TRIDENT = new ItemTrident(9).setTextureName("trident").setUnlocalizedName("trident");
+    //new-make trident, but doesn't hit all the mystical notes
+    public static final Item BRONZE_TRIDENT = new ItemTrident(7).setTextureName("trident_bronze").setUnlocalizedName("trident_bronze").setMaxDamage(320);
     public static final Item SPEAR_FLINT = new ItemSpear(6).setTextureName("spear_flint").setUnlocalizedName("spear_flint").setMaxDamage(131);
 
     public static final Item NAUTILUS = new Item().setUnlocalizedName("nautilus").setTextureName(Undertow.MODID + ":nautilus");

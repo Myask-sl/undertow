@@ -25,6 +25,7 @@ import invalid.myask.undertow.util.UndertowUtils;
 public class RenderTrident extends Render implements IItemRenderer {
     public static final RenderTrident instance = new RenderTrident();
     public static final ResourceLocation TRITEX = new ResourceLocation(Undertow.MODID, "textures/entity/trident.png");
+    public static final ResourceLocation OXITRITEX = new ResourceLocation(Undertow.MODID, "textures/entity/trident_oxidized.png");
     public static final ResourceLocation SPEARTEX = new ResourceLocation(Undertow.MODID, "textures/entity/spear_flint.png");
 
     private static final Vec3 EQUIP_FP_POS = Vec3.createVectorHelper(0.0, -.3 ,0.85);

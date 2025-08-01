@@ -21,7 +21,7 @@ public class ModelClownfishNoir extends ModelBase {
         textureHeight = 32;
 
         head = new ModelRenderer(this);
-        head.setRotationPoint(0.0F, 24.5F, -3.0F);
+        head.setRotationPoint(0.0F, 0.5F, -3.0F);
         head.setTextureOffset(0, 0).addBox(-1.0F, -4.5F, -4.0F, 2, 4, 3, 0.0F);
         head.setTextureOffset( 22, 16).addBox( -1.0F, -4.5F, -4.0F, 2, 4, 3, 0.25F);//shades
 
@@ -37,13 +37,13 @@ public class ModelClownfishNoir extends ModelBase {
         hat_r1.setTextureOffset(14, 16).addBox( -1.0F, -1.0F, -3.0F, 3, 1, 4, 0.0F);
 
         body = new ModelRenderer(this);
-        body.setRotationPoint(1.5F, 24.0F, -2.0F);
+        body.setRotationPoint(1.5F, 0.0F, -2.0F);
         body.setTextureOffset(0, 8).addBox( -3.0F, -5.0F, -2.0F, 3, 6, 6, 0.0F);
         body.setTextureOffset(12, 0).addBox( -3.0F, -5.0F, -2.0F, 3, 6, 8, 0.25F);
         body.setTextureOffset(7, 2).addBox( -2.0F, -6.0F, -1.5F, 1, 1, 5, 0.0F);
 
         caudal_fin = new ModelRenderer(this);
-        caudal_fin.setRotationPoint(0.0F, 24.5F, -3.0F);
+        caudal_fin.setRotationPoint(0.0F, 0.5F, -3.0F);
         caudal_fin.setTextureOffset(0, 8).addBox( -0.5F, -5.0F, 10.0F, 1, 1, 2, 0.0F);
         caudal_fin.setTextureOffset(0, 8).addBox( -0.5F, -4.0F, 9.0F, 1, 1, 2, 0.0F);
         caudal_fin.setTextureOffset(0, 8).addBox( -0.5F, -3.0F, 10.0F, 1, 1, 2, 0.0F);
@@ -52,7 +52,7 @@ public class ModelClownfishNoir extends ModelBase {
         caudal_fin.setTextureOffset(0, 8).addBox( -0.5F, -1.0F, 10.0F, 1, 1, 2, 0.0F);
 
         pectoralR = new ModelRenderer(this);
-        pectoralR.setRotationPoint(-1.5F, 24.0F, -2.0F);
+        pectoralR.setRotationPoint(-1.5F, 0.0F, -2.0F);
         setRotationAngle(pectoralR, 0.0F, 0.0F, 0.5236F);
         pectoralR.setTextureOffset(10, 29).addBox( 0.0F, -1.0F, -1.0F, 3, 1, 2, 0.0F);
 
@@ -61,7 +61,7 @@ public class ModelClownfishNoir extends ModelBase {
         sleeveR_r1.setTextureOffset(10, 26).addBox( 0.0F, -1.0F, -1.0F, 3, 1, 2, 0.1F);
 
         pectoraL = new ModelRenderer(this);
-        pectoraL.setRotationPoint(0.0F, 24.0F, 0.0F);
+        pectoraL.setRotationPoint(0.0F, 0.0F, 0.0F);
         pectoraL.setTextureOffset(10, 29).addBox( -3.0F, -1.0F, -1.0F, 3, 1, 2, 0.0F);
 
         ModelRenderer sleeveL_r1 = new ModelRenderer(this);
@@ -70,7 +70,7 @@ public class ModelClownfishNoir extends ModelBase {
         sleeveL_r1.setTextureOffset(10, 23).addBox(  -3.0F, -1.0F, -1.0F, 3, 1, 2, 0.1F);
 
         abdomen = new ModelRenderer(this);
-        abdomen.setRotationPoint(0.0F, 24.0F, 0.0F);
+        abdomen.setRotationPoint(0.0F, 0.0F, 0.0F);
         abdomen.setTextureOffset(0, 24).addBox( -1.0F, -4.5F, 2.0F, 2, 5, 3, 0.0F);
 
         body.addChild(head);

@@ -31,7 +31,8 @@ public class ClientProxy extends CommonProxy {
         super.preInit(event);
         MinecraftForgeClient.registerItemRenderer(UndertowItems.TRIDENT, RenderTrident.instance);
         MinecraftForgeClient.registerItemRenderer(UndertowItems.SPEAR_FLINT, RenderTrident.instance);
-        ((IItemEntityRendered)UndertowItems.TRIDENT).setResLoc(RenderTrident.TRITEX);
+        ((IItemEntityRendered)UndertowItems.TRIDENT).setResLoc(RenderTrident.OXITRITEX);
+        ((IItemEntityRendered)UndertowItems.BRONZE_TRIDENT).setResLoc(RenderTrident.TRITEX);
         ((IItemEntityRendered)UndertowItems.SPEAR_FLINT).setResLoc(RenderTrident.SPEARTEX);
 
         MinecraftForgeClient.registerItemRenderer(UndertowItems.SHIELD, RenderShield.instance);

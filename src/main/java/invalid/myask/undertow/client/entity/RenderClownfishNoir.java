@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import invalid.myask.undertow.Undertow;
 
 public class RenderClownfishNoir extends RenderLiving {
-    protected static ResourceLocation NOIRFISH = new ResourceLocation(Undertow.MODID, "textures/entity/clownfish_noir.png");
+    protected static ResourceLocation NOIRFISH = new ResourceLocation(Undertow.MODID, "textures/entity/fish/clownfish_noir.png");
 
     public RenderClownfishNoir(ModelBase mainModel, float shadowSize) {
         super(mainModel, shadowSize);
