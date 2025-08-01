@@ -23,6 +23,8 @@ public class MixinEntityClientPlayerMP_manualcrawl_swim extends EntityPlayerSP {
     private boolean undertow$manuallyCrawled = false;
     @Unique
     private boolean undertow$lastManuallyCrawled = false;
+    @Unique
+    private boolean undertow$prevCrawlPressed = false;
 
     public MixinEntityClientPlayerMP_manualcrawl_swim(Minecraft mc, World w, Session sesh, int dimension) {
         super(mc, w, sesh, dimension);
@@ -50,10 +52,11 @@ public class MixinEntityClientPlayerMP_manualcrawl_swim extends EntityPlayerSP {
             }
             if (Config.enable_crawl_keybind) {
                 if (Config.key_toggles_crawl) {
-                    if (UndertowKeybinds.crawl.isPressed())
+                    if (UndertowKeybinds.crawl.getIsKeyPressed() && !undertow$prevCrawlPressed) //posedge
                         undertow$manuallyCrawled = !undertow$manuallyCrawled;
                 }
                 else undertow$manuallyCrawled = UndertowKeybinds.crawl.getIsKeyPressed();
+                undertow$prevCrawlPressed = UndertowKeybinds.crawl.getIsKeyPressed();
             }
             if (undertow$manuallyCrawled) setSprinting(false);
             //TODO: soft_toggle_crawl--disable when in lava/water?
