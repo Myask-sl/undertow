@@ -9,7 +9,7 @@ entity.fish.cod.name=Cod
 entity.fish.salmon.name=Salmon
 entity.fish.puffer.name=Pufferfish
 entity.fish.clown.giant.name=Giant Clownfish
-entity.fish.clown.giant.suspicious.name=Furtive Giant Sales-clownfish
+entity.fish.clown.giant.suspicious.name=Furtive Giant Sales-Clownfish
 
 tile.cartography_table.name=Cartography Table
 tile.prismarine_raw.name=Raw Prismarine
@@ -33,6 +33,9 @@ item.explorer_map.templeJungle.name=Jungle Temple Explorer Map
 item.explorer_map.witchHutSwamp.name=Witch Hut Explorer Map
 item.explorer_map.monument.name=Ocean Explorer Map
 item.explorer_map.mansion.name=Woodland Explorer Map
+
+item.bottled_lightning.name=Lightning in a Bottle
+item.bucket.mob=Bucket of %s
 
 item.null.name=§CSomeone forgot to §4§nname§C this Item!§r
 
@@ -223,7 +226,14 @@ config.fish.despawn.r.all=Minimum distance from player at which [non-persistent]
 config.fish.despawn.r.some=Minimum distance from player at which [non-persistent] fish randomly despawn
 config.fish.drops.bedrocklike=Whether fish drop bonemeal more-often and Lootable like Bedrock
 
+config.magic.bottle.lightning=Whether you may bottle lightning (famously difficult. Nonvanilla)
+config.magic.bottle.lightning.glass=Whether glass bottles as well as Bottles o' Enchanting can bottle lightning (if it can be)
+
 key.crawl=Crawl
 
 death.attack.trident=%1$s was speared by %2$s
 death.attack.trident.item=%1$s was speared by %2$s using %3$s
+death.attack.channeled_lightning=%1$s was electrocuted by %2$s's Channeled lightning
+death.attack.channeled_lightning.item=%1$s was electrocuted by %2$s's Channeled lightning using %3$s
+death.attack.bottled_lightning=%1$s was electrocuted by %2$s's bottled lightning
+death.attack.bottled_lightning.item=%1$s was electrocuted by %2$s's bottled lightning, %3$s

@@ -1,8 +1,10 @@
 package invalid.myask.undertow;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
+import invalid.myask.undertow.entities.fish.EntityGiantClownfish;
 import invalid.myask.undertow.item.*;
 
 public class UndertowItems {
@@ -19,6 +21,9 @@ public class UndertowItems {
 
     public static final Item BOTTLED_LIGHTNING = new ItemBottledLightning().setUnlocalizedName("bottled_lightning")
         .setTextureName(Undertow.MODID + ":bottled_lightning");
+
+    public static final Item BUCKET_OF_GIANT_CLOWNFISH = new ItemBucketOfMob(Blocks.flowing_water, EntityGiantClownfish.class)
+        .setUnlocalizedName("bucket.mob").setTextureName(Undertow.MODID + ":bucket_of_giantclownfish");
 
     public static final ItemDumbMap FILLED_DUMB_MAP = new ItemDumbMap();
     public static final ItemEmptyDumbMap EMPTY_DUMB_MAP = new ItemEmptyDumbMap();

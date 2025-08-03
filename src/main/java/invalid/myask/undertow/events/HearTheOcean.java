@@ -17,10 +17,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemMap;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EntityDamageSource;
-import net.minecraft.util.EntityDamageSourceIndirect;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.Vec3;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.MapData;
 import net.minecraftforge.client.event.RenderItemInFrameEvent;
@@ -31,21 +29,25 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.ZombieEvent;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.entity.player.EntityInteractEvent;
+import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
 import invalid.myask.undertow.Config;
 import invalid.myask.undertow.Undertow;
+import invalid.myask.undertow.UndertowItems;
 import invalid.myask.undertow.client.PoseHelper;
 import invalid.myask.undertow.client.item.RenderFramedMap;
+import invalid.myask.undertow.entities.EntityBottledLightning;
 import invalid.myask.undertow.entities.EntityCalledLightning;
 import invalid.myask.undertow.entities.EntityDrowned;
 import invalid.myask.undertow.entities.fish.BaseFish;
 import invalid.myask.undertow.entities.ProjectileTrident;
 import invalid.myask.undertow.item.IBackportedMap;
+import invalid.myask.undertow.item.ItemBucketOfMob;
 import invalid.myask.undertow.item.ItemShield;
 import invalid.myask.undertow.item.ItemTrident;
-import invalid.myask.undertow.UndertowItems;
+import invalid.myask.undertow.util.BucketableMobsDict;
 
 import static java.lang.Float.max;
 import static java.lang.Float.min;
@@ -159,7 +161,7 @@ public class HearTheOcean {
                 event.setCanceled(true);
             } else {
                 Entity responsible = Config.channeling_aggro ? bolt.caller : bolt;
-                event.entity.attackEntityFrom(new EntityDamageSourceIndirect("channeled_lightning", responsible, bolt).setFireDamage(), 5);
+                event.entity.attackEntityFrom(new EntityDamageSourceIndirect(event.lightning instanceof EntityBottledLightning ? "bottled_lightning" : "channeled_lightning", responsible, bolt).setFireDamage(), 5);
             }
             //TODO: make damage 5+ attackdamage so it stacks up properly
             //don't cancel because there are other effects of being hit by lightning
@@ -258,13 +260,38 @@ public class HearTheOcean {
         EntityPlayer steve = event.entityPlayer;
         ItemStack stackIn = steve.getCurrentEquippedItem();
         if (Config.can_bottle_lightning && event.target instanceof EntityLightningBolt &&
-            stackIn != null && stackIn.getItem() == Items.experience_bottle) {
+            stackIn != null && (stackIn.getItem() == Items.experience_bottle || (Config.glass_bottle_lightning && stackIn.getItem() == Items.glass_bottle))) {
             stackIn.stackSize--;
             ItemStack newBottle = new ItemStack(UndertowItems.BOTTLED_LIGHTNING, 1, 0);
             if (stackIn.stackSize == 0) {
                 steve.inventory.setInventorySlotContents(steve.inventory.currentItem, newBottle);
             } else if (!steve.inventory.addItemStackToInventory(newBottle)) {
                 steve.dropPlayerItemWithRandomChoice(newBottle, false);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void handleMobBuckets(FillBucketEvent event) {
+        if (event.current.getItem() instanceof ItemBucketOfMob bucket) {
+            if (event.target.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK) {
+                bucket.releaseEntity(event.entityPlayer, event.current, event.world, event.target.hitVec.xCoord, event.target.hitVec.yCoord, event.target.hitVec.zCoord);
+            }
+        }
+        if (event.target.typeOfHit == MovingObjectPosition.MovingObjectType.ENTITY) {
+            ItemStack possibleResult = BucketableMobsDict.getBucketed(event.current.getItem(), event.target.entityHit.getClass());
+            if (possibleResult != null) {
+                event.result = possibleResult.copy();
+                NBTTagCompound nbt = event.result.getTagCompound(), mobDetails = new NBTTagCompound();
+                if (nbt == null) {
+                    nbt = new NBTTagCompound();
+                    event.result.setTagCompound(nbt);
+                }
+                if (event.target.entityHit.writeToNBTOptional(mobDetails)) {
+                    nbt.setTag("mobDetails", mobDetails);
+                    event.target.entityHit.setDead();
+                    event.setResult(Event.Result.ALLOW); //not confusingly named at all innit
+                }
             }
         }
     }

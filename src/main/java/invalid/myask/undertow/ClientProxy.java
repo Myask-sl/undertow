@@ -5,6 +5,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.client.renderer.entity.RenderArrow;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import invalid.myask.undertow.client.entity.ModelDrowned;
@@ -17,9 +18,10 @@ import invalid.myask.undertow.client.item.RenderShield;
 import invalid.myask.undertow.client.item.RenderTrident;
 import invalid.myask.undertow.client.settings.UndertowKeybinds;
 import invalid.myask.undertow.entities.EntityDrowned;
-import invalid.myask.undertow.entities.ProjectileTrident;
 import invalid.myask.undertow.entities.fish.EntityGiantClownfish;
 import invalid.myask.undertow.entities.fish.EntityGiantClownfishNoir;
+import invalid.myask.undertow.entities.ProjectileLightningBottle;
+import invalid.myask.undertow.entities.ProjectileTrident;
 
 public class ClientProxy extends CommonProxy {
 
@@ -45,6 +47,7 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityDrowned.class, new RenderDrowned(new ModelDrowned(), 0.5F, 1));
         RenderingRegistry.registerEntityRenderingHandler(EntityGiantClownfish.class, new RenderClownfishNoir(new ModelClownfishNoir(), 0.5F, false));
         RenderingRegistry.registerEntityRenderingHandler(EntityGiantClownfishNoir.class, new RenderClownfishNoir(new ModelClownfishNoir(), 0.6F, true));
+        RenderingRegistry.registerEntityRenderingHandler(ProjectileLightningBottle.class, new RenderSnowball(UndertowItems.BOTTLED_LIGHTNING));
 
         FMLCommonHandler.instance().bus().register(RenderTrident.instance); //getting timer
 

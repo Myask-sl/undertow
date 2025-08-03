@@ -21,7 +21,7 @@ public class ProjectileLightningBottle extends EntityThrowable {
 
     @Override
     protected void onImpact(MovingObjectPosition hit) {
-        Entity bolt = new EntityCalledLightning(worldObj, hit.blockX + 0.5, hit.blockY, hit.blockZ, getThrower());
+        Entity bolt = new EntityBottledLightning(worldObj, hit.blockX + 0.5, hit.blockY, hit.blockZ, getThrower());
         worldObj.spawnEntityInWorld(bolt);
     }
 }

@@ -18,6 +18,7 @@ import invalid.myask.undertow.network.PoseChangeMessage;
 import invalid.myask.undertow.events.HearTheAnvil;
 import invalid.myask.undertow.network.RiptideHitHandler;
 import invalid.myask.undertow.network.RiptideHitMessage;
+import invalid.myask.undertow.util.BucketableMobsDict;
 import invalid.myask.undertow.world.UndertowWorldgen;
 
 public class CommonProxy {
@@ -34,6 +35,7 @@ public class CommonProxy {
         UndertowBlocks.register();
         UndertowItems.register();
         UndertowEntities.register();
+        BucketableMobsDict.initialize();
         UndertowStructures.register();
         GameRegistry.registerWorldGenerator(new UndertowWorldgen(), 0);
 

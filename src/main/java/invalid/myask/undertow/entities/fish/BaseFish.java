@@ -10,10 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.common.BiomeDictionary;
 
-import invalid.myask.undertow.entities.IBucketableMob;
 import invalid.myask.undertow.Config;
 
-public class BaseFish extends EntityWaterMob implements IBucketableMob {
+public class BaseFish extends EntityWaterMob {
     public ItemStack corpse, cookedCorpse; //TODO: these should be static maybe?
     public BaseFish(World myWorld) {
         this(myWorld, new ItemStack(Items.fish, 1, 0), new ItemStack(Items.cooked_fished, 1, 0));

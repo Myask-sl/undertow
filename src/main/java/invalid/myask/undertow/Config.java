@@ -158,6 +158,7 @@ public class Config {
     public static boolean fishbone_drop_bedrock = false;
 
     public static boolean can_bottle_lightning = true; //
+    public static boolean glass_bottle_lightning = false;
 
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
@@ -475,6 +476,9 @@ public class Config {
         can_bottle_lightning = configuration.getBoolean("can_bottle_lightning", "magic",
             can_bottle_lightning, "Whether you may bottle lightning (famously difficult. Nonvanilla)",
             "config.magic.bottle.lightning");
+        glass_bottle_lightning = configuration.getBoolean("glass_bottle_lightning", "magic",
+            glass_bottle_lightning, "Whether glass bottles as well as bottles o' enchanting can bottle lightning",
+            "config.magic.bottle.lightning.glass");
 
         if (configuration.hasChanged()) {
             configuration.save();

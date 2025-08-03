@@ -3,15 +3,20 @@ package invalid.myask.undertow.item;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class ItemBucketOfMob extends ItemBucket implements IVesselOfMob<EntityLiving> {
     public final String kindOfMob;
+    protected final Block fluidBlock;
     public ItemBucketOfMob(Block whichFluid, Class<? extends EntityLiving> kindOfMob) {
         super(whichFluid);
+        fluidBlock = whichFluid;
         this.kindOfMob = EntityList.classToStringMapping.get(kindOfMob);
     }
 
@@ -25,5 +30,20 @@ public class ItemBucketOfMob extends ItemBucket implements IVesselOfMob<EntityLi
         return result;
     }
 
-    //All the details are[TODO: will be] handled in FillBucketEvent!
+    @Override
+    public int getRenderPasses(int metadata) {
+        return 2;
+    }
+
+    @Override
+    public IIcon getIconFromDamageForRenderPass(int damage, int pass) {
+        if (pass == 0) {
+            if (fluidBlock == Blocks.flowing_water) return Items.water_bucket.getIconFromDamage(damage);
+            else if (fluidBlock == Blocks.flowing_lava) return Items.lava_bucket.getIconFromDamage(damage);
+            else return Items.bucket.getIconFromDamage(damage);
+        } //else if (pass == 1) {
+        return itemIcon;
+    }
+
+    //All the details are handled in FillBucketEvent!
 }
