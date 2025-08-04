@@ -116,6 +116,7 @@ public class Config {
     public static float ladder_fastfall_pitch = 60F;
 
 ///Item/Block Enables
+    public static boolean use_vanilla_tabs = false;
     public static boolean enable_conduit = true;
 
     public static boolean enable_shields = true;
@@ -159,6 +160,7 @@ public class Config {
 
     public static boolean can_bottle_lightning = true; //
     public static boolean glass_bottle_lightning = false;
+    public static boolean silly_lightning_bottles = false;
 
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
@@ -384,6 +386,9 @@ public class Config {
             ladder_fastfall_pitch, -91, 91, "Minimum angle below which to fastfall on ladders, in degrees. Remember, positive is looking down. (nonvanilla)",
             "config.ladder.fastfall.pitch");
 
+        use_vanilla_tabs = configuration.getBoolean("use_vanilla_tabs", Configuration.CATEGORY_GENERAL,
+            use_vanilla_tabs, "Put undertow items in vanilla tabs", "config.items.tabs.vanilla");
+
         enable_conduit = configuration.getBoolean("enable_conduit", "enable.block",
             enable_conduit, "Enable conduits (vanilla, 1.13+)", "config.enable.blocks.conduit");
 
@@ -479,6 +484,9 @@ public class Config {
         glass_bottle_lightning = configuration.getBoolean("glass_bottle_lightning", "magic",
             glass_bottle_lightning, "Whether glass bottles as well as bottles o' enchanting can bottle lightning",
             "config.magic.bottle.lightning.glass");
+        silly_lightning_bottles = configuration.getBoolean("silly_lightning_bottles", "magic",
+            silly_lightning_bottles, "Whether bottled lightning strikes indefinitely many times (ooops)",
+            "config.magic.bottle.lightning.silly");
 
         if (configuration.hasChanged()) {
             configuration.save();

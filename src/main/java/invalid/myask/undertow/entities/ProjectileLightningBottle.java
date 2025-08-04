@@ -6,7 +6,10 @@ import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
+import invalid.myask.undertow.Config;
+
 public class ProjectileLightningBottle extends EntityThrowable {
+    @SuppressWarnings("unused")
     public ProjectileLightningBottle(World worldIn) {
         super(worldIn);
     }
@@ -23,5 +26,6 @@ public class ProjectileLightningBottle extends EntityThrowable {
     protected void onImpact(MovingObjectPosition hit) {
         Entity bolt = new EntityBottledLightning(worldObj, hit.blockX + 0.5, hit.blockY, hit.blockZ, getThrower());
         worldObj.spawnEntityInWorld(bolt);
+        if (!Config.silly_lightning_bottles) setDead();
     }
 }

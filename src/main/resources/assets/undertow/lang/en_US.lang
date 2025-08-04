@@ -14,6 +14,8 @@ entity.fish.clown.giant.suspicious.name=Furtive Giant Sales-Clownfish
 tile.cartography_table.name=Cartography Table
 tile.prismarine_raw.name=Raw Prismarine
 
+key.categories.undertow=Undertow
+
 item.trident.name=Old Trident
 item.trident_bronze.name=Bronze Trident
 item.spear_flint.name=Flint Spear
@@ -195,6 +197,8 @@ config.poses.swim.friction.multiplier=Swim friction multiplier (0.5-1 ideally, 0
 config.poses.swim.y.multiplier=Swim y-velocity multiplier (1 is silly-high. 0.25 seems accurate)
 config.poses.swimtide.ydrop.disable=If true, only crawl will immediately lower hitbox
 
+config.items.tabs.vanilla=Put undertow items in vanilla tabs
+
 config.enable.blocks.conduit=Enable conduits
 
 config.enable.items.shield=Enable shields (Java Edition 1.9+)
@@ -228,6 +232,7 @@ config.fish.drops.bedrocklike=Whether fish drop bonemeal more-often and Lootable
 
 config.magic.bottle.lightning=Whether you may bottle lightning (famously difficult. Nonvanilla)
 config.magic.bottle.lightning.glass=Whether glass bottles as well as Bottles o' Enchanting can bottle lightning (if it can be)
+config.magic.bottle.lightning.silly=Whether bottled lightning strikes indefinitely many times (ooops)
 
 key.crawl=Crawl
 

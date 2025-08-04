@@ -1,6 +1,7 @@
 package invalid.myask.undertow.item;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -27,5 +28,10 @@ public class ItemBottledLightning extends Item {
         }
 
         return itemStackIn;
+    }
+
+    @Override
+    public EnumRarity getRarity(ItemStack p_77613_1_) {
+        return EnumRarity.rare;
     }
 }
