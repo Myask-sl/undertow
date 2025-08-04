@@ -14,7 +14,7 @@ entity.fish.clown.giant.suspicious.name=Furtive Giant Sales-Clownfish
 tile.cartography_table.name=Cartography Table
 tile.prismarine_raw.name=Raw Prismarine
 
-key.categories.undertow=Undertow
+itemGroup.undertow=Undertow
 
 item.trident.name=Old Trident
 item.trident_bronze.name=Bronze Trident
